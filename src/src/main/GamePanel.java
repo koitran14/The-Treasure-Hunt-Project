@@ -18,7 +18,7 @@ public class GamePanel extends JPanel {
     private MouseInputs mouseInputs;
     private float xDelta = 100, yDelta = 100; // change from int to float to set the speed of object in movement
     private long lastCheck = 0;
-    private BufferedImage img,subImg;
+    private BufferedImage img;
     private BufferedImage[][] animations;
     private int aniTick, aniIndex, aniSpeed = 15;
     private int playerAction = IDLE;
