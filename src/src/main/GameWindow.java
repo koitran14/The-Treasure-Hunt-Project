@@ -1,19 +1,34 @@
 package main;
 
-import javax.swing.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowFocusListener;
+
+import javax.swing.JFrame;
 
 public class GameWindow {
     private JFrame jframe;
+
     public GameWindow(GamePanel gamePanel){
 
         jframe = new JFrame();
+        jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        jframe.add(gamePanel);
+        jframe.setLocationRelativeTo(null);
+        jframe.setResizable(false);
+        jframe.pack();
+        jframe.setVisible(true);
+        jframe.addWindowFocusListener(new WindowFocusListener () {
 
-        jframe.setSize(400,400);                    //set size của cửa sổ
-        jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  //set up đóng hoàn toàn
-        jframe.add(gamePanel);                                   //add cái đã draw ở gamePanel qua.
-        jframe.setLocationRelativeTo(null);                     //set screen at the center
-        jframe.setResizable(false);                             //unallow to resize the window
-        jframe.pack();                                          //fit windows
-        jframe.setVisible(true);                                //set hiện khung cửa sổ
+            @Override
+            public void windowLostFocus(WindowEvent e) {
+                gamePanel.getGame().windowFocusLost();
+            }
+
+
+            @Override
+            public void windowGainedFocus(WindowEvent e) {
+                // TODO Auto-generated method stub
+            }
+        });
     }
 }
