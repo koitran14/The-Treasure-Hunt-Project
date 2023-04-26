@@ -75,7 +75,6 @@ public class Game implements Runnable{
 
             deltaU += (currentTime - previousTime) / timePerUpdate;
             deltaF += (currentTime - previousTime) / timePerFrame;
-            System.out.println(deltaF);
             previousTime = currentTime;
 
             if (deltaU >= 1) {
