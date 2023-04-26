@@ -1,10 +1,10 @@
 package entities;
 
-import static utilz.constants.PlayerConstants.GetSpriteAmount;
-import static utilz.constants.PlayerConstants.IDLE;
-import static utilz.constants.PlayerConstants.RUNNING;
-import static utilz.constants.PlayerConstants.ATTACK_JUMP_2;
-import static utilz.constants.PlayerConstants.*;
+import static utilz.Constants.PlayerConstants.GetSpriteAmount;
+import static utilz.Constants.PlayerConstants.IDLE;
+import static utilz.Constants.PlayerConstants.RUNNING;
+import static utilz.Constants.PlayerConstants.ATTACK_JUMP_2;
+import static utilz.Constants.PlayerConstants.*;
 import static utilz.HelpMethods.*;
 
 import java.awt.Graphics;
@@ -39,8 +39,7 @@ public class Player extends entity {
     public Player(float x, float y, int width, int height){
         super(x,y,width,height);
         loadAnimations();
-        initHitbox(x,y, 20 * Game.SCALE, 27 * Game.SCALE);
-
+        initHitbox(x,y, (int) (20 * Game.SCALE), (int) (27 * Game.SCALE));
 
     }
 
