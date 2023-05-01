@@ -1,12 +1,11 @@
 package ui;
 
-import gamestates.Gamestate;
-import main.Game;
-import utilz.LoadSave;
-
-import java.awt.*;
+import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
+import gamestates.Gamestate;
+import utilz.LoadSave;
 import static utilz.Constants.UI.Buttons.*;
 
 public class MenuButton {
@@ -28,49 +27,55 @@ public class MenuButton {
 
     private void initBounds() {
         bounds = new Rectangle(xPos - xOffsetCenter, yPos, B_WIDTH, B_HEIGHT);
+
     }
 
-    public void draw(Graphics g){
-        g.drawImage(imgs[index], xPos - xOffsetCenter, yPos, B_WIDTH, B_HEIGHT,null);
+    private void loadImgs() {
+        imgs = new BufferedImage[3];
+        BufferedImage temp = LoadSave.GetSpriteAtlas(LoadSave.MENU_BUTTONS);
+        for (int i = 0; i < imgs.length; i++)
+            imgs[i] = temp.getSubimage(i * B_WIDTH_DEFAULT, rowIndex * B_HEIGHT_DEFAULT, B_WIDTH_DEFAULT, B_HEIGHT_DEFAULT);
     }
-    public void update(){
+
+    public void draw(Graphics g) {
+        g.drawImage(imgs[index], xPos - xOffsetCenter, yPos, B_WIDTH, B_HEIGHT, null);
+    }
+
+    public void update() {
         index = 0;
         if (mouseOver)
             index = 1;
         if (mousePressed)
             index = 2;
     }
-    private void loadImgs() {
-        imgs = new BufferedImage[3];
-        BufferedImage temp = LoadSave.GetSpriteAtlas(LoadSave.MENU_BUTTONS);
-        for (int i = 0; i < imgs.length; i++)
-            imgs[i] = temp.getSubimage(i * B_WIDTH_DEFAULT,rowIndex * B_HEIGHT_DEFAULT,B_WIDTH_DEFAULT,B_HEIGHT_DEFAULT);
-    }
 
     public boolean isMouseOver() {
         return mouseOver;
-    }
-
-    public boolean isMousePressed() {
-        return mousePressed;
     }
 
     public void setMouseOver(boolean mouseOver) {
         this.mouseOver = mouseOver;
     }
 
+    public boolean isMousePressed() {
+        return mousePressed;
+    }
+
     public void setMousePressed(boolean mousePressed) {
         this.mousePressed = mousePressed;
     }
+
     public Rectangle getBounds() {
         return bounds;
     }
-    public void applyGamestate(){
+
+    public void applyGamestate() {
         Gamestate.state = state;
     }
 
-    public void resetBools(){
+    public void resetBools() {
         mouseOver = false;
         mousePressed = false;
     }
+
 }
