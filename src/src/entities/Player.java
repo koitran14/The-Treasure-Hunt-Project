@@ -10,8 +10,6 @@ import java.awt.Point;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 
-import javax.lang.model.util.ElementScanner14;
-
 import audio.AudioPlayer;
 import gamestates.Playing;
 import main.Game;
@@ -50,6 +48,8 @@ public class Player extends Entity {
 	private boolean attackChecked;
 	private Playing playing;
 
+	private int tileY = 0;
+
 	public Player(float x, float y, int width, int height, Playing playing) {
 		super(x, y, width, height);
 		this.playing = playing;
@@ -77,38 +77,36 @@ public class Player extends Entity {
 		updateHealthBar();
 
 		if (currentHealth <= 0) {
-			updateHealthBar();
-			if (currentHealth <=0){
-				if (state!= DEAD){
-					state = DEAD;
-					aniTick = 0;
-					aniIndex = 0;
-					playing.setPlayerDying(true);
-					playing.getGame().getAudioPlayer().playEffect(AudioPlayer.DIE);//CO SOUNG DIE
-				}
-				else if (aniIndex == GetSpriteAmount(DEAD) - 1 && aniTick >= ANI_SPEED - 1){
-					playing.setGameOver(true);
-					playing.getGame().getAudioPlayer().stopSong();
-				
-					playing.getGame().getAudioPlayer().playEffect(AudioPlayer.GAMEOVER);
-
-
-				} else
+			if (state != DEAD) {
+				state = DEAD;
+				aniTick = 0;
+				aniIndex = 0;
+				playing.setPlayerDying(true);
+				playing.getGame().getAudioPlayer().playEffect(AudioPlayer.DIE);
+			} else if (aniIndex == GetSpriteAmount(DEAD) - 1 && aniTick >= ANI_SPEED - 1) {
+				playing.setGameOver(true);
+				playing.getGame().getAudioPlayer().stopSong();
+				playing.getGame().getAudioPlayer().playEffect(AudioPlayer.GAMEOVER);
+			} else
 				updateAnimationTick();
 
-	
+			return;
+		}
 
 		updateAttackBox();
 
 		updatePos();
-		if (moving)
-			checkPotionTouched();
+		if (moving) {
+		
+			tileY = (int) (hitbox.y / Game.TILES_SIZE);
+		}
 		if (attacking)
 			checkAttack();
-		
+
 		updateAnimationTick();
 		setAnimation();
 	}
+
 
 	private void checkPotionTouched() {
 		playing.checkPotionTouched(hitbox);
@@ -269,6 +267,10 @@ public class Player extends Entity {
 			currentHealth = maxHealth;
 	}
 
+	public void kill() {
+		currentHealth = 0;
+	}
+
 	public void changePower(int value) {
 		System.out.println("Added power!");
 	}
@@ -333,4 +335,9 @@ public class Player extends Entity {
 			inAir = true;
 	}
 
+	public int getTileY() {
+		return tileY;
+	}
+
 }
+	
