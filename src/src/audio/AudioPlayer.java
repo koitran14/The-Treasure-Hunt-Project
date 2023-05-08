@@ -48,9 +48,9 @@ public class AudioPlayer {
 
     private void loadEffects() {
         String[] effectNames = {"die","jump","gameover","lvlcompleted","attack1","attack2","attack3"}; //match the index on top
-        songs = new Clip[effectNames.length]; // add more song, the clip also increase in size
+        effects = new Clip[effectNames.length]; // add more song, the clip also increase in size
         for (int i =0; i < effects.length;i++)
-        songs[i] = getClip(effectNames[i]);
+        effects[i] = getClip(effectNames[i]);
 
         updateEffectsVolume(); // update to 0.5f
 
