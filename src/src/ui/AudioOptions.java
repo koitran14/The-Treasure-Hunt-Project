@@ -17,7 +17,7 @@ public class AudioOptions {
 
 	private Game game;
 
-	public AudioOptions() {
+	public AudioOptions(Game game) {
 
 		createSoundButtons();
 		createVolumeButton();
@@ -59,7 +59,7 @@ public class AudioOptions {
 			volumeButton.changeX(e.getX());
 			float valueAfter = volumeButton.getFloatValue();
 			if(valueBefore != valueAfter)
-				game.getAudioPlayer().setVolume(valueAfter);
+				game.getAudioPlayer().setVolume(valueAfter);//CHANGING THE VALUE
 		}
 	}
 
