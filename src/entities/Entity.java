@@ -16,6 +16,7 @@ public abstract class Entity {
 	protected float airSpeed;
 	protected boolean inAir = false;
 	protected int maxHealth;
+
 	protected int currentHealth;
 	protected Rectangle2D.Float attackBox;
 	protected float walkSpeed;
@@ -53,5 +54,7 @@ public abstract class Entity {
 	public int getAniIndex() {
 		return aniIndex;
 	}
-
+	public int getCurrentHealth() {
+		return currentHealth;
+	}
 }

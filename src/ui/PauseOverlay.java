@@ -89,6 +89,7 @@ public class PauseOverlay {
 	public void mouseReleased(MouseEvent e) {
 		if (isIn(e, menuB)) {
 			if (menuB.isMousePressed()) {
+				playing.resetAll();		// bug 4: fail reset after turn back to the main menu screen.
 				playing.setGamestate(Gamestate.MENU);
 				playing.unpauseGame();
 			}

@@ -53,9 +53,10 @@ public class EnemyManager {
 
 	public void checkEnemyHit(Rectangle2D.Float attackBox) {
 		for (Crabby c : crabbies)
-			if (c.isActive())
-				if (attackBox.intersects(c.getHitbox())) {
-					c.hurt(10);
+			if (c.getCurrentHealth() > 0)		// bug 1: fix constant killing the enermy
+				if (c.isActive())
+					if (attackBox.intersects(c.getHitbox())) {
+						c.hurt(10);
 					return;
 				}
 	}

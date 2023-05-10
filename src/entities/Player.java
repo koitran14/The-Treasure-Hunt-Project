@@ -87,7 +87,7 @@ public class Player extends Entity {
 
 	private void initAttackBox() {
 		attackBox = new Rectangle2D.Float(x, y, (int) (20 * Game.SCALE), (int) (20 * Game.SCALE));
-		resetAttackBox();
+		resetAttackBox(); //bug 5: fail reset attackbox
 	}
 
 	private void resetAttackBox() {
@@ -162,6 +162,7 @@ public class Player extends Entity {
 	}
 
 	private void updateAttackBox() {
+		// fix bug 2: press left and right in same time let the attackbox in the opposite direction of character facing.
 		if (right && left) {
 			if (flipW == 1) {
 				attackBox.x = hitbox.x + hitbox.width + (int) (Game.SCALE * 10);
@@ -410,6 +411,7 @@ public class Player extends Entity {
 		inAir = false;
 		attacking = false;
 		moving = false;
+		airSpeed = 0f; // bug 3: keep jumping after click restart
 		state = IDLE;
 		currentHealth = maxHealth;
 
