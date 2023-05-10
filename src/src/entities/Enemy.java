@@ -58,7 +58,6 @@ public abstract class Enemy extends Entity {
 				hitbox.x += xSpeed;
 				return;
 			}
-
 		changeWalkDir();
 	}
 
@@ -76,7 +75,6 @@ public abstract class Enemy extends Entity {
 				if (IsSightClear(lvlData, hitbox, player.hitbox, tileY))
 					return true;
 			}
-
 		return false;
 	}
 
@@ -108,7 +106,6 @@ public abstract class Enemy extends Entity {
 		if (attackBox.intersects(player.hitbox))
 			player.changeHealth(-GetEnemyDmg(enemyType));
 		attackChecked = true;
-
 	}
 
 	protected void updateAnimationTick() {

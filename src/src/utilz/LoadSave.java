@@ -80,7 +80,6 @@ public class LoadSave {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-
 		return imgs;
 	}
 

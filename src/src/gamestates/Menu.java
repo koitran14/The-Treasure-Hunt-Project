@@ -29,7 +29,6 @@ public class Menu extends State implements Statemethods {
 		menuHeight = (int) (backgroundImg.getHeight() * Game.SCALE);
 		menuX = Game.GAME_WIDTH / 2 - menuWidth / 2;
 		menuY = (int) (45 * Game.SCALE);
-
 	}
 
 	private void loadButtons() {
@@ -46,7 +45,6 @@ public class Menu extends State implements Statemethods {
 
 	@Override
 	public void draw(Graphics g) {
-
 		g.drawImage(backgroundImgPink, 0, 0, Game.GAME_WIDTH, Game.GAME_HEIGHT, null);
 		g.drawImage(backgroundImg, menuX, menuY, menuWidth, menuHeight, null);
 
@@ -67,7 +65,6 @@ public class Menu extends State implements Statemethods {
 				mb.setMousePressed(true);
 			}
 		}
-
 	}
 
 	@Override
@@ -81,15 +78,12 @@ public class Menu extends State implements Statemethods {
 				break;
 			}
 		}
-
 		resetButtons();
-
 	}
 
 	private void resetButtons() {
 		for (MenuButton mb : buttons)
 			mb.resetBools();
-
 	}
 
 	@Override
@@ -102,13 +96,10 @@ public class Menu extends State implements Statemethods {
 				mb.setMouseOver(true);
 				break;
 			}
-
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if (e.getKeyCode() == KeyEvent.VK_ENTER)
-			Gamestate.state = Gamestate.PLAYING;
 
 	}
 

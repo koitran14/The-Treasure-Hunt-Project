@@ -52,15 +52,14 @@ public class Playing extends State implements Statemethods {
 		smallCloudsPos = new int[8];
 		for (int i = 0; i < smallCloudsPos.length; i++)
 			smallCloudsPos[i] = (int) (90 * Game.SCALE) + rnd.nextInt((int) (100 * Game.SCALE));
-
 		calcLvlOffset();
 		loadStartLevel();
 	}
 
 	public void loadNextLevel() {
-		resetAll();
 		levelManager.loadNextLevel();
 		player.setSpawn(levelManager.getCurrentLevel().getPlayerSpawn());
+		resetAll();
 	}
 
 	private void loadStartLevel() {
@@ -98,7 +97,7 @@ public class Playing extends State implements Statemethods {
 			player.update();
 		} else {
 			levelManager.update();
-			
+			objectManager.update(levelManager.getCurrentLevel().getLevelData(), player);
 			player.update();
 			enemyManager.update(levelManager.getCurrentLevel().getLevelData(), player);
 			checkCloseToBorder();
@@ -174,14 +173,20 @@ public class Playing extends State implements Statemethods {
 	public void checkPotionTouched(Rectangle2D.Float hitbox) {
 		objectManager.checkObjectTouched(hitbox);
 	}
+	public void checkSpikesTouched(Player p) {
+		objectManager.checkSpikesTouched(p);
+	}
 
 	
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		if (!gameOver)
+		if (!gameOver) {
 			if (e.getButton() == MouseEvent.BUTTON1)
 				player.setAttacking(true);
+			else if (e.getButton() == MouseEvent.BUTTON3)
+				player.powerAttack();
+		}
 	}
 
 	@Override
@@ -219,7 +224,6 @@ public class Playing extends State implements Statemethods {
 				player.setJump(false);
 				break;
 			}
-
 	}
 
 	public void mouseDragged(MouseEvent e) {
@@ -237,7 +241,6 @@ public class Playing extends State implements Statemethods {
 				levelCompletedOverlay.mousePressed(e);
 		} else
 			gameOverOverlay.mousePressed(e);
-
 	}
 
 	@Override
@@ -265,7 +268,7 @@ public class Playing extends State implements Statemethods {
 	public void setLevelCompleted(boolean levelCompleted) {
 		this.lvlCompleted = levelCompleted;
 		if(levelCompleted)
-		game.getAudioPlayer().lvlCompleted();
+			game.getAudioPlayer().lvlCompleted();
 	}
 
 	public void setMaxLvlOffset(int lvlOffset) {
@@ -298,7 +301,5 @@ public class Playing extends State implements Statemethods {
 
 	public void setPlayerDying(boolean playerDying) {
 		this.playerDying = playerDying;
-
 	}
-
 }

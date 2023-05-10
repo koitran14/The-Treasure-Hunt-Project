@@ -39,7 +39,8 @@ public class Game implements Runnable {
 		gamePanel = new GamePanel(this);
 		gameWindow = new GameWindow(gamePanel);
 		gamePanel.setFocusable(true);
-		gamePanel.requestFocus();
+//		gamePanel.requestFocus();
+		gamePanel.requestFocusInWindow();
 
 		startGameLoop();
 	}
@@ -66,11 +67,12 @@ public class Game implements Runnable {
 			playing.update();
 			break;
 		case OPTIONS:
+			gameOptions.update();
+			break;
 		case QUIT:
 		default:
 			System.exit(0);
 			break;
-
 		}
 	}
 
@@ -81,6 +83,9 @@ public class Game implements Runnable {
 			break;
 		case PLAYING:
 			playing.draw(g);
+			break;
+		case OPTIONS:
+			gameOptions.draw(g);
 			break;
 		default:
 			break;
@@ -129,7 +134,6 @@ public class Game implements Runnable {
 
 			}
 		}
-
 	}
 
 	public void windowFocusLost() {
@@ -140,9 +144,11 @@ public class Game implements Runnable {
 	public Menu getMenu() {
 		return menu;
 	}
+	public GameOptions getGameOptions() {
+		return gameOptions;
+	}
 	public AudioOptions getAudioOptions(){ return audioOptions; }
 	public AudioPlayer getAudioPlayer(){ return audioPlayer; }
-
 	public Playing getPlaying() {
 		return playing;
 	}
