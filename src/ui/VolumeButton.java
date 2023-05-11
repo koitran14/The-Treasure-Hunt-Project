@@ -3,7 +3,11 @@ package ui;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
+import utilz.Constants.*;
 import utilz.LoadSave;
+
+import javax.swing.*;
+
 import static utilz.Constants.UI.VolumeButtons.*;
 
 public class VolumeButton extends PauseButton {
@@ -27,12 +31,13 @@ public class VolumeButton extends PauseButton {
 	}
 
 	private void loadImgs() {
-		BufferedImage temp = LoadSave.GetSpriteAtlas(LoadSave.VOLUME_BUTTONS);
+		BufferedImage temp = LoadSave.GetSpriteAtlas(LoadSave.VOLUME_BUTTONS, FileType.MENU);
 		imgs = new BufferedImage[3];
 		for (int i = 0; i < imgs.length; i++)
 			imgs[i] = temp.getSubimage(i * VOLUME_DEFAULT_WIDTH, 0, VOLUME_DEFAULT_WIDTH, VOLUME_DEFAULT_HEIGHT);
 
 		slider = temp.getSubimage(3 * VOLUME_DEFAULT_WIDTH, 0, SLIDER_DEFAULT_WIDTH, VOLUME_DEFAULT_HEIGHT);
+
 	}
 
 	public void update() {
@@ -41,11 +46,14 @@ public class VolumeButton extends PauseButton {
 			index = 1;
 		if (mousePressed)
 			index = 2;
+
 	}
 
 	public void draw(Graphics g) {
+
 		g.drawImage(slider, x, y, width, height, null);
 		g.drawImage(imgs[index], buttonX - VOLUME_WIDTH / 2, y, VOLUME_WIDTH, height, null);
+
 	}
 
 	public void changeX(int x) {
@@ -57,6 +65,7 @@ public class VolumeButton extends PauseButton {
 			buttonX = x;
 		updateFloatValue();
 		bounds.x = buttonX - VOLUME_WIDTH / 2;
+
 	}
 
 	private void updateFloatValue() {

@@ -26,10 +26,10 @@ public class AudioPlayer {
     public static int ATTACK_TWO = 5;
     public static int ATTACK_THREE = 6;
 
-    private Clip[] songs,effects;
-    private int currentSongId; // What kinds of song wwe have 
-    private float volume = 1f; 
-    private boolean songMute, effectMute; 
+    private Clip[] songs, effects;
+    private int currentSongId; // What kinds of song we have
+    private float volume = 0.75f; //koi fixed this volume to make it louder because it's still small
+    private boolean songMute, effectMute;
     private Random rand = new Random(); // Attack sounds, co 3 cai
 
     public AudioPlayer() {
@@ -43,14 +43,14 @@ public class AudioPlayer {
         String[] names = {"menu","level1","level2"};
         songs = new Clip[names.length]; // add more song, the clip also increase in size
         for (int i =0; i < songs.length;i++)
-        songs[i] = getClip(names[i]);
+            songs[i] = getClip(names[i]);
     }
 
     private void loadEffects() {
         String[] effectNames = {"die","jump","gameover","lvlcompleted","attack1","attack2","attack3"}; //match the index on top
         effects = new Clip[effectNames.length]; // add more song, the clip also increase in size
         for (int i =0; i < effects.length;i++)
-        effects[i] = getClip(effectNames[i]);
+            effects[i] = getClip(effectNames[i]);
 
         updateEffectsVolume(); // update to 0.5f
 
@@ -62,13 +62,12 @@ public class AudioPlayer {
         try {
             audio = AudioSystem.getAudioInputStream(url);
             Clip c = AudioSystem.getClip();
-            c.open(audio);// Open clip and put audio in
+            c.open(audio);  // Open clip and put audio in
             return c;
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {// Diffrent type of errors it can return
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
         return null;
     }
 
@@ -77,26 +76,26 @@ public class AudioPlayer {
         updateSongVolume();
         updateEffectsVolume();
     }
+
     public void stopSong(){
         if (songs[currentSongId].isActive())
-        songs[currentSongId].stop();
+            songs[currentSongId].stop();
     }
+
     public void setLevelSong (int lvlIndex){
-        //switch level have different songs 
+        //switch level have different songs
         if (lvlIndex % 2 ==0)
-        playSong(LEVEL_1);
+            playSong(LEVEL_1);
         else
-        playSong(LEVEL_2);
+            playSong(LEVEL_2);
     }
     public void lvlCompleted(){
         stopSong();
         playEffect(LVL_COMPLETED);
     }
-    
-
 
     public void playAttackSound() {
-        int start =4; //4 là ATTACK ONE
+        int start = 4; //4 là ATTACK ONE
         start += rand.nextInt(3);
         playEffect(start);
     }
@@ -110,7 +109,7 @@ public class AudioPlayer {
         //stop the previous song to play the new one
             stopSong();
             currentSongId = song;
-            updateSongVolume();//apply the volume before change song
+            updateSongVolume(); //apply the volume before change song
             songs[currentSongId].setMicrosecondPosition(0);
             songs[currentSongId].loop(Clip.LOOP_CONTINUOUSLY);//loop background song until the end of time
     }
@@ -120,38 +119,36 @@ public class AudioPlayer {
         this.songMute = !songMute;
         for (Clip c: songs){
             BooleanControl booleanControl = (BooleanControl) c.getControl(BooleanControl.Type.MUTE);//MUTE có the false hoac true
-         booleanControl.setValue(songMute); 
+         booleanControl.setValue(songMute);
         }
     }
+
     public void toggleEffectMute(){
         this.effectMute = !effectMute;
         for (Clip c: effects){
             BooleanControl booleanControl = (BooleanControl) c.getControl(BooleanControl.Type.MUTE);//MUTE có the false hoac true
-         booleanControl.setValue(effectMute);   
+         booleanControl.setValue(effectMute);
         }
-        //Howloudthatit
+        //How loud that it
         if(!effectMute)
-        playEffect(JUMP);
-
+            playEffect(JUMP);
     }
 
-
-//updating volume for songs or effects
+    //updating volume for songs or effects
     private void updateSongVolume() {
-        //All the songs is in the background 
-        FloatControl gainControl = (FloatControl) songs[currentSongId].getControl(FloatControl.Type.MASTER_GAIN);//getcontrol for changing value,.. of the clips
+        //All the songs is in the background
+        FloatControl gainControl = (FloatControl) songs[currentSongId].getControl(FloatControl.Type.MASTER_GAIN);//get control for changing value,.. of the clips
         float range = gainControl.getMaximum() - gainControl.getMinimum();
         float gain = (range * volume) + gainControl.getMinimum();
         gainControl.setValue(gain); //Change the value
     }
     private void updateEffectsVolume(){
         //Update 1 effect not all effects
-        for(Clip c: effects){
-        FloatControl gainControl = (FloatControl) c.getControl(FloatControl.Type.MASTER_GAIN);//getcontrol for changing value,.. of the clips
-        float range = gainControl.getMaximum() - gainControl.getMinimum();
-        float gain = (range * volume) + gainControl.getMinimum();
-        gainControl.setValue(gain); //Change the value
+        for (Clip c: effects){
+            FloatControl gainControl = (FloatControl) c.getControl(FloatControl.Type.MASTER_GAIN);//get control for changing value,.. of the clips
+            float range = gainControl.getMaximum() - gainControl.getMinimum();
+            float gain = (range * volume) + gainControl.getMinimum();
+            gainControl.setValue(gain); //Change the value
+        }
     }
-    }
-
 }

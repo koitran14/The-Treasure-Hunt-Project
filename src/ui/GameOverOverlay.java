@@ -4,13 +4,13 @@ import static utilz.Constants.UI.URMButtons.URM_SIZE;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 
 import gamestates.Gamestate;
 import gamestates.Playing;
 import main.Game;
+import utilz.Constants.*;
 import utilz.LoadSave;
 
 public class GameOverOverlay {
@@ -36,7 +36,7 @@ public class GameOverOverlay {
 	}
 
 	private void createImg() {
-		img = LoadSave.GetSpriteAtlas(LoadSave.DEATH_SCREEN);
+		img = LoadSave.GetSpriteAtlas(LoadSave.DEATH_SCREEN, FileType.MENU);
 		imgW = (int) (img.getWidth() * Game.SCALE);
 		imgH = (int) (img.getHeight() * Game.SCALE);
 		imgX = Game.GAME_WIDTH / 2 - imgW / 2;
@@ -57,10 +57,6 @@ public class GameOverOverlay {
 	public void update() {
 		menu.update();
 		play.update();
-	}
-
-	public void keyPressed(KeyEvent e) {
-		
 	}
 
 	private boolean isIn(UrmButton b, MouseEvent e) {
@@ -86,7 +82,7 @@ public class GameOverOverlay {
 		} else if (isIn(play, e))
 			if (play.isMousePressed()) {
 				playing.resetAll();
-				playing.getGame().getAudioPlayer().setLevelSong(playing.getLevelManager().getLevelIndex());//Play again play the sound after die
+				playing.getGame().getAudioPlayer().setLevelSong(playing.getLevelManager().getLevelIndex());
 			}
 
 		menu.resetBools();
@@ -99,6 +95,4 @@ public class GameOverOverlay {
 		else if (isIn(play, e))
 			play.setMousePressed(true);
 	}
-
 }
-

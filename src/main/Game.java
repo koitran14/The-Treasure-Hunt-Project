@@ -3,17 +3,15 @@ package main;
 import java.awt.Graphics;
 
 import audio.AudioPlayer;
+//import gamestates.Credits;
 import gamestates.GameOptions;
 import gamestates.Gamestate;
 import gamestates.Menu;
 import gamestates.Playing;
 import ui.AudioOptions;
-import utilz.LoadSave;
-
 
 public class Game implements Runnable {
 
-	private GameWindow gameWindow;
 	private GamePanel gamePanel;
 	private Thread gameThread;
 	private final int FPS_SET = 120;
@@ -21,6 +19,7 @@ public class Game implements Runnable {
 
 	private Playing playing;
 	private Menu menu;
+	//	private Credits credits;
 	private GameOptions gameOptions;
 	private AudioOptions audioOptions;
 	private AudioPlayer audioPlayer;
@@ -34,22 +33,20 @@ public class Game implements Runnable {
 	public final static int GAME_HEIGHT = TILES_SIZE * TILES_IN_HEIGHT;
 
 	public Game() {
+		System.out.println("size: " + GAME_WIDTH + " : " + GAME_HEIGHT);
 		initClasses();
-
 		gamePanel = new GamePanel(this);
-		gameWindow = new GameWindow(gamePanel);
-		gamePanel.setFocusable(true);
-//		gamePanel.requestFocus();
+		new GameWindow(gamePanel);
 		gamePanel.requestFocusInWindow();
-
 		startGameLoop();
 	}
 
 	private void initClasses() {
-		audioOptions = new AudioOptions(this) ;
+		audioOptions = new AudioOptions(this);
 		audioPlayer = new AudioPlayer();
 		menu = new Menu(this);
 		playing = new Playing(this);
+//		credits = new Credits(this);
 		gameOptions = new GameOptions(this);
 	}
 
@@ -60,41 +57,24 @@ public class Game implements Runnable {
 
 	public void update() {
 		switch (Gamestate.state) {
-		case MENU:
-			menu.update();
-			break;
-		case PLAYING:
-			playing.update();
-			break;
-		case OPTIONS:
-			gameOptions.update();
-			break;
-		case QUIT:
-		default:
-			System.exit(0);
-			break;
+			case MENU -> menu.update();
+			case PLAYING -> playing.update();
+			case OPTIONS -> gameOptions.update();
+			case QUIT -> System.exit(0);
 		}
 	}
 
+	@SuppressWarnings("incomplete-switch")
 	public void render(Graphics g) {
 		switch (Gamestate.state) {
-		case MENU:
-			menu.draw(g);
-			break;
-		case PLAYING:
-			playing.draw(g);
-			break;
-		case OPTIONS:
-			gameOptions.draw(g);
-			break;
-		default:
-			break;
+			case MENU -> menu.draw(g);
+			case PLAYING -> playing.draw(g);
+			case OPTIONS -> gameOptions.draw(g);
 		}
 	}
 
 	@Override
 	public void run() {
-
 		double timePerFrame = 1000000000.0 / FPS_SET;
 		double timePerUpdate = 1000000000.0 / UPS_SET;
 
@@ -108,6 +88,7 @@ public class Game implements Runnable {
 		double deltaF = 0;
 
 		while (true) {
+
 			long currentTime = System.nanoTime();
 
 			deltaU += (currentTime - previousTime) / timePerUpdate;
@@ -115,24 +96,26 @@ public class Game implements Runnable {
 			previousTime = currentTime;
 
 			if (deltaU >= 1) {
+
 				update();
 				updates++;
 				deltaU--;
-			}
 
+			}
 			if (deltaF >= 1) {
 				gamePanel.repaint();
 				frames++;
 				deltaF--;
 			}
+				if (System.currentTimeMillis() - lastCheck >= 1000) {
 
-			if (System.currentTimeMillis() - lastCheck >= 1000) {
-				lastCheck = System.currentTimeMillis();
-				System.out.println("FPS: " + frames + " | UPS: " + updates);
-				frames = 0;
-				updates = 0;
+					lastCheck = System.currentTimeMillis();
+					System.out.println("FPS: " + frames + " | UPS: " + updates);
+					frames = 0;
+					updates = 0;
 
-			}
+				}
+
 		}
 	}
 
@@ -144,12 +127,20 @@ public class Game implements Runnable {
 	public Menu getMenu() {
 		return menu;
 	}
+
+	public Playing getPlaying() {
+		return playing;
+	}
+
 	public GameOptions getGameOptions() {
 		return gameOptions;
 	}
-	public AudioOptions getAudioOptions(){ return audioOptions; }
-	public AudioPlayer getAudioPlayer(){ return audioPlayer; }
-	public Playing getPlaying() {
-		return playing;
+
+	public AudioOptions getAudioOptions() {
+		return audioOptions;
+	}
+
+	public AudioPlayer getAudioPlayer() {
+		return audioPlayer;
 	}
 }

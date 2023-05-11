@@ -5,20 +5,148 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="137009ce-13a4-4c4c-ad2e-c8ccd302dceb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/effects/DialogueEffect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/effects/Rain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/Pinkstar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/Shark.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/objects/BackgroundTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/objects/Grass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ui/GameCompletedOverlay.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/audio/AudioPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/audio/AudioPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/background_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/ball.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/big_clouds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/button_atlas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/cannon_atlas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/completed_sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/crabby_sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/death_screen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/entities/Crabby.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/entities/Crabby.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/entities/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/entities/Enemy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/entities/EnemyManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/entities/EnemyManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/entities/Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/entities/Entity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/entities/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/entities/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/gamestates/GameOptions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/gamestates/GameOptions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/gamestates/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/gamestates/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/gamestates/Playing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/gamestates/Playing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/gamestates/State.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/gamestates/State.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/health_power_bar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/inputs/KeyboardInputs$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/inputs/KeyboardInputs$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/inputs/KeyboardInputs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/inputs/KeyboardInputs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/inputs/MouseInputs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/inputs/MouseInputs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/levels/Level.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/levels/Level.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/levels/LevelManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/levels/LevelManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/main/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/main/Game$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/main/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/main/GameWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/main/GameWindow$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/main/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/main/GameWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/menu_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/objects/Cannon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/objects/Cannon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/objects/ObjectManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/objects/ObjectManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/objects/Projectile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/objects/Projectile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/objects_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/options_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/outside_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/pause_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/player_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/playing_bg_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/potions_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/small_clouds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/sound_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/trap_atlas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/ui/AudioOptions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/ui/AudioOptions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/ui/GameOverOverlay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/ui/GameOverOverlay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/ui/LevelCompletedOverlay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/ui/LevelCompletedOverlay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/ui/MenuButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/ui/MenuButton.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/ui/PauseOverlay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/ui/PauseOverlay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/ui/SoundButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/ui/SoundButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/ui/UrmButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/ui/UrmButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/ui/VolumeButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/ui/VolumeButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/urm_buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$Directions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$Directions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$EnemyConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$EnemyConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$Environment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$Environment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$ObjectConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$ObjectConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$PlayerConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$PlayerConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$Projectiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$Projectiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$UI$Buttons.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$UI$Buttons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$UI$PauseButtons.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$UI$PauseButtons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$UI$URMButtons.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$UI$URMButtons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$UI$VolumeButtons.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$UI$VolumeButtons.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants$UI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/HelpMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/HelpMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/utilz/LoadSave.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/utilz/LoadSave.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/volume_buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/background_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/ball.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/big_clouds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/button_atlas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/cannon_atlas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/completed_sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/crabby_sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/death_screen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/health_power_bar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/menu_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/objects_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/options_background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/outside_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/pause_menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/player_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/playing_bg_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/potions_sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/small_clouds.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/sound_button.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/trap_atlas.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/urm_buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/volume_buttons.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/audio/AudioPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/audio/AudioPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Crabby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Crabby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/EnemyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/EnemyManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/GameOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/GameOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Gamestate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Gamestate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Playing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Playing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inputs/KeyboardInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs/KeyboardInputs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/inputs/MouseInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inputs/MouseInputs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levels/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/levels/LevelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/levels/LevelManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Cannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Cannon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/ObjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ObjectManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Projectile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Projectile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/objects/Spike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/Spike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/AudioOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/AudioOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/GameOverOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/GameOverOverlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/LevelCompletedOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/LevelCompletedOverlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/MenuButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/MenuButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/PauseButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/PauseButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ui/PauseOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/PauseOverlay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/SoundButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/SoundButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/UrmButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/UrmButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/VolumeButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/VolumeButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilz/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilz/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilz/HelpMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilz/HelpMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utilz/LoadSave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utilz/LoadSave.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,12 +156,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/koi/Khôi/OOP.Project&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.MainClass" />
@@ -64,5 +193,16 @@
       <updated>1683721066927</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

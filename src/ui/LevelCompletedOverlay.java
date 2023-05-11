@@ -4,10 +4,12 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.io.File;
 
 import gamestates.Gamestate;
 import gamestates.Playing;
 import main.Game;
+import utilz.Constants;
 import utilz.LoadSave;
 import static utilz.Constants.UI.URMButtons.*;
 
@@ -33,7 +35,7 @@ public class LevelCompletedOverlay {
 	}
 
 	private void initImg() {
-		img = LoadSave.GetSpriteAtlas(LoadSave.COMPLETED_IMG);
+		img = LoadSave.GetSpriteAtlas(LoadSave.COMPLETED_IMG, Constants.FileType.MENU);
 		bgW = (int) (img.getWidth() * Game.SCALE);
 		bgH = (int) (img.getHeight() * Game.SCALE);
 		bgX = Game.GAME_WIDTH / 2 - bgW / 2;
@@ -41,7 +43,6 @@ public class LevelCompletedOverlay {
 	}
 
 	public void draw(Graphics g) {
-		// Added after youtube upload
 		g.setColor(new Color(0, 0, 0, 200));
 		g.fillRect(0, 0, Game.GAME_WIDTH, Game.GAME_HEIGHT);
 
@@ -76,10 +77,11 @@ public class LevelCompletedOverlay {
 				playing.setGamestate(Gamestate.MENU);
 			}
 		} else if (isIn(next, e))
-			if (next.isMousePressed()){
+			if (next.isMousePressed()) {
 				playing.loadNextLevel();
 				playing.getGame().getAudioPlayer().setLevelSong(playing.getLevelManager().getLevelIndex());
 			}
+
 		menu.resetBools();
 		next.resetBools();
 	}
@@ -90,5 +92,4 @@ public class LevelCompletedOverlay {
 		else if (isIn(next, e))
 			next.setMousePressed(true);
 	}
-
 }

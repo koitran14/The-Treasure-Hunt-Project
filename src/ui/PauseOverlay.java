@@ -7,10 +7,9 @@ import java.awt.image.BufferedImage;
 import gamestates.Gamestate;
 import gamestates.Playing;
 import main.Game;
+import utilz.Constants.*;
 import utilz.LoadSave;
-import static utilz.Constants.UI.PauseButtons.*;
 import static utilz.Constants.UI.URMButtons.*;
-import static utilz.Constants.UI.VolumeButtons.*;
 
 public class PauseOverlay {
 
@@ -24,9 +23,7 @@ public class PauseOverlay {
 		this.playing = playing;
 		loadBackground();
 		audioOptions = playing.getGame().getAudioOptions();
-
 		createUrmButtons();
-
 	}
 
 	private void createUrmButtons() {
@@ -41,7 +38,7 @@ public class PauseOverlay {
 	}
 
 	private void loadBackground() {
-		backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.PAUSE_BACKGROUND);
+		backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.PAUSE_BACKGROUND, FileType.MENU);
 		bgW = (int) (backgroundImg.getWidth() * Game.SCALE);
 		bgH = (int) (backgroundImg.getHeight() * Game.SCALE);
 		bgX = Game.GAME_WIDTH / 2 - bgW / 2;
@@ -89,7 +86,7 @@ public class PauseOverlay {
 	public void mouseReleased(MouseEvent e) {
 		if (isIn(e, menuB)) {
 			if (menuB.isMousePressed()) {
-				playing.resetAll();		// bug 4: fail reset after turn back to the main menu screen.
+				playing.resetAll();
 				playing.setGamestate(Gamestate.MENU);
 				playing.unpauseGame();
 			}

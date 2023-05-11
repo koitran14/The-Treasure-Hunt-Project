@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 
 import main.Game;
 import ui.MenuButton;
+import utilz.Constants;
 import utilz.LoadSave;
 
 public class Menu extends State implements Statemethods {
@@ -19,22 +20,23 @@ public class Menu extends State implements Statemethods {
 		super(game);
 		loadButtons();
 		loadBackground();
-		backgroundImgPink = LoadSave.GetSpriteAtlas(LoadSave.MENU_BACKGROUND_IMG);
+		backgroundImgPink = LoadSave.GetSpriteAtlas( LoadSave.MENU_BACKGROUND_IMG, Constants.FileType.MENU);
 
 	}
 
 	private void loadBackground() {
-		backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.MENU_BACKGROUND);
+		backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.MENU_BACKGROUND, Constants.FileType.MENU);
 		menuWidth = (int) (backgroundImg.getWidth() * Game.SCALE);
 		menuHeight = (int) (backgroundImg.getHeight() * Game.SCALE);
 		menuX = Game.GAME_WIDTH / 2 - menuWidth / 2;
-		menuY = (int) (45 * Game.SCALE);
+		menuY = (int) (25 * Game.SCALE);
 	}
 
 	private void loadButtons() {
 		buttons[0] = new MenuButton(Game.GAME_WIDTH / 2, (int) (150 * Game.SCALE), 0, Gamestate.PLAYING);
-		buttons[1] = new MenuButton(Game.GAME_WIDTH / 2, (int) (220 * Game.SCALE), 1, Gamestate.OPTIONS);
-		buttons[2] = new MenuButton(Game.GAME_WIDTH / 2, (int) (290 * Game.SCALE), 2, Gamestate.QUIT);
+		buttons[1] = new MenuButton(Game.GAME_WIDTH / 2, (int) (230 * Game.SCALE), 1, Gamestate.OPTIONS);
+//		buttons[2] = new MenuButton(Game.GAME_WIDTH / 2, (int) (270 * Game.SCALE), 3, Gamestate.CREDITS);
+		buttons[2] = new MenuButton(Game.GAME_WIDTH / 2, (int) (310 * Game.SCALE), 2, Gamestate.QUIT);
 	}
 
 	@Override
@@ -50,12 +52,6 @@ public class Menu extends State implements Statemethods {
 
 		for (MenuButton mb : buttons)
 			mb.draw(g);
-	}
-
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -84,6 +80,7 @@ public class Menu extends State implements Statemethods {
 	private void resetButtons() {
 		for (MenuButton mb : buttons)
 			mb.resetBools();
+
 	}
 
 	@Override
@@ -96,10 +93,16 @@ public class Menu extends State implements Statemethods {
 				mb.setMouseOver(true);
 				break;
 			}
+
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
 
 	}
 
@@ -108,5 +111,4 @@ public class Menu extends State implements Statemethods {
 		// TODO Auto-generated method stub
 
 	}
-
 }

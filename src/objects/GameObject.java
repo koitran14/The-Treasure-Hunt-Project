@@ -94,4 +94,5 @@ public class GameObject {
 	public int getAniTick() {
 		return aniTick;
 	}
+
 }

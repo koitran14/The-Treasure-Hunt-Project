@@ -9,6 +9,7 @@ import main.Game;
 import ui.AudioOptions;
 import ui.PauseButton;
 import ui.UrmButton;
+import utilz.Constants;
 import utilz.LoadSave;
 import static utilz.Constants.UI.URMButtons.*;
 
@@ -34,8 +35,8 @@ public class GameOptions extends State implements Statemethods {
 	}
 
 	private void loadImgs() {
-		backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.MENU_BACKGROUND_IMG);
-		optionsBackgroundImg = LoadSave.GetSpriteAtlas(LoadSave.OPTIONS_MENU);
+		backgroundImg = LoadSave.GetSpriteAtlas(LoadSave.MENU_BACKGROUND_IMG, Constants.FileType.MENU);
+		optionsBackgroundImg = LoadSave.GetSpriteAtlas(LoadSave.OPTIONS_MENU, Constants.FileType.MENU);
 
 		bgW = (int) (optionsBackgroundImg.getWidth() * Game.SCALE);
 		bgH = (int) (optionsBackgroundImg.getHeight() * Game.SCALE);
@@ -56,7 +57,6 @@ public class GameOptions extends State implements Statemethods {
 
 		menuB.draw(g);
 		audioOptions.draw(g);
-
 	}
 
 	public void mouseDragged(MouseEvent e) {
@@ -95,7 +95,6 @@ public class GameOptions extends State implements Statemethods {
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_ESCAPE)
 			Gamestate.state = Gamestate.MENU;
-
 	}
 
 	@Override
@@ -115,4 +114,3 @@ public class GameOptions extends State implements Statemethods {
 	}
 
 }
-
