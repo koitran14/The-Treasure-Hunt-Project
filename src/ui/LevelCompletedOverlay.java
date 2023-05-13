@@ -1,3 +1,6 @@
+// Purpose: displaying a level completed overlay when the player finishes a level in the game,
+// can step into the next level by "next button" or return to the main menu by "menu button".
+
 package ui;
 
 import java.awt.Color;

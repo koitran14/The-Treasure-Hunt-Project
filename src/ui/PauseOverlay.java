@@ -1,3 +1,5 @@
+// Purpose: to create the pause menu overlay during gameplay.
+
 package ui;
 
 import java.awt.Graphics;

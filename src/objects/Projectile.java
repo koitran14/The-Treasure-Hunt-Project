@@ -1,3 +1,5 @@
+//Purpose: to represent a cannonball and its behaviors/properties
+
 package objects;
 
 import java.awt.geom.Rectangle2D;

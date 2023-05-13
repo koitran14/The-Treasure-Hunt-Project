@@ -1,3 +1,6 @@
+// Purpose: used for drawing the audio options menu on the game's screen
+// and updating the state of the audio options buttons and volume slider when necessary.
+
 package ui;
 
 import static utilz.Constants.UI.PauseButtons.SOUND_SIZE;

@@ -1,3 +1,5 @@
+//Purpose: load and store information about a game level.
+
 package levels;
 
 import java.awt.Color;
@@ -98,6 +100,7 @@ public class Level {
 		}
 	}
 
+	// calculate the limitation to render the level and determining edge-reaching of the screen.
 	private void calcLvlOffsets() {
 		lvlTilesWide = img.getWidth();
 		maxTilesOffset = lvlTilesWide - Game.TILES_IN_WIDTH;

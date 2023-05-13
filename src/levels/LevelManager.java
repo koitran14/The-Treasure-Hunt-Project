@@ -1,3 +1,5 @@
+//Purpose: build and manage all the elements of levels.
+
 package levels;
 
 import java.awt.Graphics;

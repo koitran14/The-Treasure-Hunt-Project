@@ -1,3 +1,6 @@
+//Purpose: defines an object representing a visual effect
+// of raindrops falling down the screen.
+
 package effects;
 
 import java.awt.Graphics;
@@ -20,7 +23,7 @@ public class Rain {
     // computer power. Disable it if the game lags.
     public Rain() {
         rand = new Random();
-        drops = new Point2D.Float[1000];
+        drops = new Point2D.Float[1000]; // -> store the positions of raindrops
         rainParticle = LoadSave.GetSpriteAtlas(LoadSave.RAIN_PARTICLE, Constants.FileType.OBJECT);
         initDrops();
     }
@@ -30,10 +33,16 @@ public class Rain {
             drops[i] = getRndPos();
     }
 
+    // returns a new Point2D.Float object with a random x position
+    // and a y position set to a random integer between 0 and the game window height
     private Point2D.Float getRndPos() {
         return new Point2D.Float((int) getNewX(0), rand.nextInt(Game.GAME_HEIGHT));
     }
 
+
+    // updates the positions of all the raindrops by moving them down the screen
+    // at a fixed speed rainSpeed. If a raindrop reaches the bottom of the screen,
+    // its position is reset to the top with a new x position determined by getNewX(xLvlOffset).
     public void update(int xLvlOffset) {
         for (Point2D.Float p : drops) {
             p.y += rainSpeed;
@@ -44,6 +53,7 @@ public class Rain {
         }
     }
 
+    // return a new x position for a raindrop
     private float getNewX(int xLvlOffset) {
         float value = (-Game.GAME_WIDTH) + rand.nextInt((int) (Game.GAME_WIDTH * 3f)) + xLvlOffset;
         return value;

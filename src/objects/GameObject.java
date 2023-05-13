@@ -1,3 +1,5 @@
+//Purpose: Superclass to create all game objects in this game.
+
 package objects;
 
 import static utilz.Constants.ANI_SPEED;

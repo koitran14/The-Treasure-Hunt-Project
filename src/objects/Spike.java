@@ -1,3 +1,5 @@
+//Purpose: to create Spike object.
+
 package objects;
 
 import main.Game;

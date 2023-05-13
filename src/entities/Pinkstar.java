@@ -1,3 +1,5 @@
+//Purpose: define behavior and properties of Pinkstar enemies in the game.
+
 package entities;
 
 import static utilz.Constants.EnemyConstants.*;
@@ -73,8 +75,10 @@ public class Pinkstar extends Enemy {
         }
     }
 
+    //check if having collision with player's hitbox and causes dmg to player
     private void checkDmgToPlayer(Player player) {
         if (hitbox.intersects(player.getHitbox()))
+            //time is used to prevent inflicting too much damage on the player too quickly.
             if (tickSinceLastDmgToPlayer >= 60) {
                 tickSinceLastDmgToPlayer = 0;
                 player.changeHealth(-GetEnemyDmg(enemyType), this);
@@ -82,12 +86,12 @@ public class Pinkstar extends Enemy {
                 tickSinceLastDmgToPlayer++;
     }
 
+    //sets the walk direction of the Pinkstar enemy based on the relative position of the player.
     private void setWalkDir(Player player) {
         if (player.getHitbox().x > hitbox.x)
             walkDir = RIGHT;
         else
             walkDir = LEFT;
-
     }
 
     protected void move(int[][] lvlData, Playing playing) {
@@ -111,11 +115,10 @@ public class Pinkstar extends Enemy {
             rollOver(playing);
             rollDurationTick = 0;
         }
-
         changeWalkDir();
-
     }
 
+    //checks if the Pinkstar enemy has completed a roll attack and triggers the end of the attack state.
     private void checkRollOver(Playing playing) {
         rollDurationTick++;
         if (rollDurationTick >= rollDuration) {
@@ -123,7 +126,7 @@ public class Pinkstar extends Enemy {
             rollDurationTick = 0;
         }
     }
-
+    //ends the Pinkstar enemy's roll attack and triggers a dialogue to be displayed.
     private void rollOver(Playing playing) {
         newState(IDLE);
         playing.addDialogue((int) hitbox.x, (int) hitbox.y, QUESTION);

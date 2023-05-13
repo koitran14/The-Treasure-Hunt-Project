@@ -1,3 +1,6 @@
+// Purpose: contain all the methods of gamestate class
+// to handle input events: mouse, key.
+
 package gamestates;
 
 import java.awt.Graphics;

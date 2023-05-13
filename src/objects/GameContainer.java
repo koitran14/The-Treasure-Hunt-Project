@@ -1,3 +1,5 @@
+//Purpose: to create and update for containers + attributes/methods related to.
+
 package objects;
 
 import static utilz.Constants.ObjectConstants.*;

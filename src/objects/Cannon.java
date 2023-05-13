@@ -1,3 +1,5 @@
+//Purpose: to create a cannon object with specific attributes + methods.
+
 package objects;
 
 import main.Game;
@@ -10,7 +12,6 @@ public class Cannon extends GameObject {
         super(x, y, objType);
         tileY = y / Game.TILES_SIZE;
         initHitbox(40, 26);
-//		hitbox.x -= (int) (1 * Game.SCALE);
         hitbox.y += (int) (6 * Game.SCALE);
     }
 

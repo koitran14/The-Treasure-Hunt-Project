@@ -1,3 +1,6 @@
+// Purpose: created to be a base class for all game states in this game
+// and contain help method related to.
+
 package gamestates;
 
 import java.awt.event.MouseEvent;
@@ -28,8 +31,6 @@ public class State {
 			case MENU -> game.getAudioPlayer().playSong(AudioPlayer.MENU_1);
 			case PLAYING -> game.getAudioPlayer().setLevelSong(game.getPlaying().getLevelManager().getLevelIndex());
 		}
-
 		Gamestate.state = state;
 	}
-
 }

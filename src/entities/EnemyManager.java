@@ -1,3 +1,5 @@
+//Purpose: manage the enemy entities in the game, updating and drawing.
+
 package entities;
 
 import java.awt.Graphics;
@@ -17,17 +19,20 @@ public class EnemyManager {
 	private BufferedImage[][] crabbyArr, pinkstarArr, sharkArr;
 	private Level currentLevel;
 
+	//create / update enemy and load them for a particular level
 	public EnemyManager(Playing playing) {
 		this.playing = playing;
 		loadEnemyImgs();
 	}
 
+	//load enemies for a particular level
 	public void loadEnemies(Level level) {
 		this.currentLevel = level;
 	}
 
+	//update the state of enemies
 	public void update(int[][] lvlData) {
-		boolean isAnyActive = false;
+		boolean isAnyActive = false; //used to check any enemies
 		for (Crabby c : currentLevel.getCrabs())
 			if (c.isActive()) {
 				c.update(lvlData, playing);
@@ -45,7 +50,7 @@ public class EnemyManager {
 				s.update(lvlData, playing);
 				isAnyActive = true;
 			}
-
+		//check levelCompleted
 		if (!isAnyActive)
 			playing.setLevelCompleted(true);
 	}
@@ -82,6 +87,7 @@ public class EnemyManager {
 
 	}
 
+	//check whether any of the enemies have been hit by the player's attack.
 	public void checkEnemyHit(Rectangle2D.Float attackBox) {
 		for (Crabby c : currentLevel.getCrabs())
 			if (c.isActive())
@@ -114,6 +120,7 @@ public class EnemyManager {
 			}
 	}
 
+	//get + load the enemy images into the game.
 	private void loadEnemyImgs() {
 		crabbyArr = getImgArr(LoadSave.GetSpriteAtlas(LoadSave.CRABBY_SPRITE, FileType.ENTITY), 9, 5, CRABBY_WIDTH_DEFAULT, CRABBY_HEIGHT_DEFAULT);
 		pinkstarArr = getImgArr(LoadSave.GetSpriteAtlas(LoadSave.PINKSTAR_ATLAS, FileType.ENTITY), 8, 5, PINKSTAR_WIDTH_DEFAULT, PINKSTAR_HEIGHT_DEFAULT);
@@ -129,10 +136,15 @@ public class EnemyManager {
 	}
 
 	public void resetAllEnemies() {
+		//resetCrabby
 		for (Crabby c : currentLevel.getCrabs())
 			c.resetEnemy();
+
+		//resetPinkstar
 		for (Pinkstar p : currentLevel.getPinkstars())
 			p.resetEnemy();
+
+		//resetShark enemy for new levels
 		for (Shark s : currentLevel.getSharks())
 			s.resetEnemy();
 	}

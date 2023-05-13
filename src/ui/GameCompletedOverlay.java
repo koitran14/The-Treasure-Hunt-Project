@@ -1,3 +1,7 @@
+// Purpose: to handle the drawing and updating of the game completed overlay, including the image and menu button.
+// It also handles user input events such as mouse movements and mouse clicks on the menu button to reset the game
+// and return to the main menu.
+
 package ui;
 
 import java.awt.Color;
@@ -14,7 +18,7 @@ import utilz.LoadSave;
 public class GameCompletedOverlay {
     private Playing playing;
     private BufferedImage img;
-    private MenuButton quit, credit;
+    private MenuButton quit;
     private int imgX, imgY, imgW, imgH;
 
     public GameCompletedOverlay(Playing playing) {
@@ -25,7 +29,6 @@ public class GameCompletedOverlay {
 
     private void createButtons() {
         quit = new MenuButton(Game.GAME_WIDTH / 2, (int) (270 * Game.SCALE), 2, Gamestate.MENU);
-        //credit = new MenuButton(Game.GAME_WIDTH / 2, (int) (200 * Game.SCALE), 3, Gamestate.CREDITS);
     }
 
     private void createImg() {
@@ -42,7 +45,6 @@ public class GameCompletedOverlay {
 
         g.drawImage(img, imgX, imgY, imgW, imgH, null);
 
-        credit.draw(g);
         quit.draw(g);
     }
 
@@ -67,7 +69,6 @@ public class GameCompletedOverlay {
                 playing.resetAll();
                 playing.resetGameCompleted();
                 playing.setGamestate(Gamestate.MENU);
-
             }
             quit.resetBools();
         }

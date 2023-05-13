@@ -1,3 +1,5 @@
+//Purpose:  create a game loop + manage the game states for a 2D game
+
 package main;
 
 import java.awt.Graphics;
@@ -19,7 +21,6 @@ public class Game implements Runnable {
 
 	private Playing playing;
 	private Menu menu;
-	//	private Credits credits;
 	private GameOptions gameOptions;
 	private AudioOptions audioOptions;
 	private AudioPlayer audioPlayer;
@@ -46,7 +47,6 @@ public class Game implements Runnable {
 		audioPlayer = new AudioPlayer();
 		menu = new Menu(this);
 		playing = new Playing(this);
-//		credits = new Credits(this);
 		gameOptions = new GameOptions(this);
 	}
 
@@ -64,7 +64,6 @@ public class Game implements Runnable {
 		}
 	}
 
-	@SuppressWarnings("incomplete-switch")
 	public void render(Graphics g) {
 		switch (Gamestate.state) {
 			case MENU -> menu.draw(g);
@@ -73,6 +72,7 @@ public class Game implements Runnable {
 		}
 	}
 
+	//FPS + UPS
 	@Override
 	public void run() {
 		double timePerFrame = 1000000000.0 / FPS_SET;
@@ -108,14 +108,11 @@ public class Game implements Runnable {
 				deltaF--;
 			}
 				if (System.currentTimeMillis() - lastCheck >= 1000) {
-
 					lastCheck = System.currentTimeMillis();
 					System.out.println("FPS: " + frames + " | UPS: " + updates);
 					frames = 0;
 					updates = 0;
-
 				}
-
 		}
 	}
 

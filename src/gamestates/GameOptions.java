@@ -1,3 +1,6 @@
+// Purpose: create a user interface for the game options
+// and manages the user's input on the game's audio settings.
+
 package gamestates;
 
 import java.awt.Graphics;

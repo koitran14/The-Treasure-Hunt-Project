@@ -1,3 +1,9 @@
+// Purpose: to represent a button that can be clicked to toggle sound on and off.
+// It extends the PauseButton class, which likely provides some common functionality for buttons used in a pause menu.
+// loads and stores images for the different states of the button (muted/unmuted, mouse over, mouse pressed).
+// and provides methods for updating and drawing the button based on its current state. It also provides methods
+// for getting and setting the button's state (muted or not muted).
+
 package ui;
 
 import java.awt.Graphics;

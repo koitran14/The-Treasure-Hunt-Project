@@ -1,3 +1,6 @@
+// Purpose: create a game window using Java's Swing library,
+// set its properties, and add a game panel to it.
+
 package main;
 
 import java.awt.event.WindowEvent;

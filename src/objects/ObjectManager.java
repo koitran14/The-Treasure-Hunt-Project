@@ -1,3 +1,5 @@
+//Purpose: to manage the objects in the game and their interactions with each other.
+
 package objects;
 
 import java.awt.Graphics;
@@ -88,6 +90,7 @@ public class ObjectManager {
 	}
 
 	private void loadImgs() {
+		//potion
 		BufferedImage potionSprite = LoadSave.GetSpriteAtlas(LoadSave.POTION_ATLAS, Constants.FileType.OBJECT);
 		potionImgs = new BufferedImage[2][7];
 
@@ -95,6 +98,7 @@ public class ObjectManager {
 			for (int i = 0; i < potionImgs[j].length; i++)
 				potionImgs[j][i] = potionSprite.getSubimage(12 * i, 16 * j, 12, 16);
 
+		//containers
 		BufferedImage containerSprite = LoadSave.GetSpriteAtlas(LoadSave.CONTAINER_ATLAS, Constants.FileType.OBJECT);
 		containerImgs = new BufferedImage[2][8];
 
@@ -102,8 +106,10 @@ public class ObjectManager {
 			for (int i = 0; i < containerImgs[j].length; i++)
 				containerImgs[j][i] = containerSprite.getSubimage(40 * i, 30 * j, 40, 30);
 
+		//spike
 		spikeImg = LoadSave.GetSpriteAtlas(LoadSave.TRAP_ATLAS, Constants.FileType.OBJECT);
 
+		//cannon + cannonballs
 		cannonImgs = new BufferedImage[7];
 		BufferedImage temp = LoadSave.GetSpriteAtlas(LoadSave.CANNON_ATLAS, Constants.FileType.OBJECT);
 
@@ -111,8 +117,6 @@ public class ObjectManager {
 			cannonImgs[i] = temp.getSubimage(i * 40, 0, 40, 26);
 
 		cannonBallImg = LoadSave.GetSpriteAtlas(LoadSave.CANNON_BALL, Constants.FileType.OBJECT);
-
-		//get the treeImgs elements
 
 		//tree 1
 		treeImgs = new BufferedImage[2][4];
@@ -144,7 +148,6 @@ public class ObjectManager {
 
 		updateCannons(lvlData, player);
 		updateProjectiles(lvlData, player);
-
 	}
 
 	private void updateBackgroundTrees() {
@@ -277,9 +280,9 @@ public class ObjectManager {
 
 	public void resetAllObjects() {
 		loadObjects(playing.getLevelManager().getCurrentLevel());
-		for (Potion p : potions)
+		for (Potion p : currentLevel.getPotions())
 			p.reset();
-		for (GameContainer gc : containers)
+		for (GameContainer gc : currentLevel.getContainers())
 			gc.reset();
 		for (Cannon c : currentLevel.getCannons())
 			c.reset();

@@ -1,5 +1,8 @@
+//Purpose: represents the player's avatar in a game.
+
 package entities;
 
+import static utilz.Constants.Dialogue.QUESTION;
 import static utilz.Constants.PlayerConstants.*;
 import static utilz.HelpMethods.*;
 import static utilz.Constants.*;
@@ -265,8 +268,9 @@ public class Player extends Entity {
 
 		if (moving)
 			state = RUNNING;
-		else
+		else {
 			state = IDLE;
+		}
 
 		if (inAir) {
 			if (airSpeed < 0)
@@ -330,7 +334,6 @@ public class Player extends Entity {
 				else
 					xSpeed = walkSpeed;
 			}
-
 			xSpeed *= 3;
 		}
 
@@ -354,6 +357,7 @@ public class Player extends Entity {
 
 		} else
 			updateXPos(xSpeed);
+
 		moving = true;
 	}
 
@@ -389,7 +393,6 @@ public class Player extends Entity {
 			else
 				newState(HIT);
 		}
-
 		currentHealth += value;
 		currentHealth = Math.max(Math.min(currentHealth, maxHealth), 0);
 	}

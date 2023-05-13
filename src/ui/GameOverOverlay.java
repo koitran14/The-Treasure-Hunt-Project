@@ -1,3 +1,5 @@
+//Purpose: display a game over screen with two buttons: menu and replay.
+
 package ui;
 
 import static utilz.Constants.UI.URMButtons.URM_SIZE;

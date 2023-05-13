@@ -1,3 +1,4 @@
+//Purpose: including all the utility functions that support to check some entities/objects' properties in coding.
 package utilz;
 
 import java.awt.geom.Rectangle2D;
@@ -130,13 +131,6 @@ public class HelpMethods {
 			}
 		return true;
 	}
-
-	// Player can sometimes be on an edge and in sight of enemy.
-	// The old method would return false because the player x is not on edge.
-	// This method checks both player x and player x + width.
-	// If tile under playerBox.x is not solid, we switch to playerBox.x +
-	// playerBox.width;
-	// One of them will be true, because of prior checks.
 
 	public static boolean IsSightClear(int[][] lvlData, Rectangle2D.Float enemyBox, Rectangle2D.Float playerBox, int yTile) {
 		int firstXTile = (int) (enemyBox.x / Game.TILES_SIZE);

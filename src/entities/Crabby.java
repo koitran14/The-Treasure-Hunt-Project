@@ -1,3 +1,8 @@
+//Purpose:
+// define a "Crabby" enemy in a game.
+// It extends the "Enemy" class and overrides some of its methods
+// to define the behavior of this specific type of enemy.
+
 package entities;
 
 import static utilz.Constants.EnemyConstants.*;
@@ -14,12 +19,14 @@ public class Crabby extends Enemy {
 		initAttackBox(82, 19, 30);
 	}
 
+	//update behavior + animations of crabby
 	public void update(int[][] lvlData, Playing playing) {
 		updateBehavior(lvlData, playing);
-		updateAnimationTick();
+		updateAnimationTick(); //update animation frame
 		updateAttackBox();
 	}
 
+	//behavior of crabby
 	private void updateBehavior(int[][] lvlData, Playing playing) {
 		if (firstUpdate)
 			firstUpdateCheck(lvlData);

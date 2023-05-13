@@ -1,3 +1,5 @@
+//Purpose: contain all info + help methods the buttons of Menu Screen.
+
 package ui;
 
 import java.awt.Graphics;

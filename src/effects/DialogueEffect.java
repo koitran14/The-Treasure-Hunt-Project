@@ -1,3 +1,5 @@
+//Purpose: defines an object representing a visual effect that is displayed during dialogue.
+
 package effects;
 
 import static utilz.Constants.ANI_SPEED;
@@ -9,12 +11,14 @@ public class DialogueEffect {
     private int aniIndex, aniTick;
     private boolean active = true;
 
+    //constructor
     public DialogueEffect(int x, int y, int type) {
         this.x = x;
         this.y = y;
         this.type = type;
     }
 
+    //update current animation of effect
     public void update() {
         aniTick++;
         if (aniTick >= ANI_SPEED) {
@@ -27,16 +31,19 @@ public class DialogueEffect {
         }
     }
 
+    // turn off
     public void deactive() {
         active = false;
     }
 
+    // turn on effects and get its intial state with new coordinates
     public void reset(int x, int y) {
         this.x = x;
         this.y = y;
         active = true;
     }
 
+    //getter
     public int getAniIndex() {
         return aniIndex;
     }

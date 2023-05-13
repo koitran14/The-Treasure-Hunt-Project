@@ -1,3 +1,5 @@
+//Purpose:serve as a blueprint for any entities that will be included in the game: player, enemies, items.
+
 package entities;
 
 import static utilz.Constants.Directions.DOWN;
@@ -36,6 +38,7 @@ public abstract class Entity {
 		this.height = height;
 	}
 
+	//update to determines how far an entity is pushed back when hit by an attack
 	protected void updatePushBackDrawOffset() {
 		float speed = 0.95f;
 		float limit = -30f;
@@ -51,6 +54,8 @@ public abstract class Entity {
 		}
 	}
 
+	//let the entity moves the entity in the opposite direction of the attack
+	// when an entity is hit by an attack.
 	protected void pushBack(int pushBackDir, int[][] lvlData, float speedMulti) {
 		float xSpeed = 0;
 		if (pushBackDir == LEFT)
@@ -62,6 +67,7 @@ public abstract class Entity {
 			hitbox.x += xSpeed * speedMulti;
 	}
 
+	//used to check the Attack/Hitbox area.
 	protected void drawAttackBox(Graphics g, int xLvlOffset) {
 		g.setColor(Color.red);
 		g.drawRect((int) (attackBox.x - xLvlOffset), (int) attackBox.y, (int) attackBox.width, (int) attackBox.height);
@@ -72,10 +78,12 @@ public abstract class Entity {
 		g.drawRect((int) hitbox.x - xLvlOffset, (int) hitbox.y, (int) hitbox.width, (int) hitbox.height);
 	}
 
+	//initialize hitbox
 	protected void initHitbox(int width, int height) {
 		hitbox = new Rectangle2D.Float(x, y, (int) (width * Game.SCALE), (int) (height * Game.SCALE));
 	}
 
+	//getter
 	public Rectangle2D.Float getHitbox() {
 		return hitbox;
 	}
@@ -88,6 +96,7 @@ public abstract class Entity {
 		return aniIndex;
 	}
 
+	//set the state and reset the animation variable.
 	protected void newState(int state) {
 		this.state = state;
 		aniTick = 0;

@@ -1,3 +1,5 @@
+//Purpose: contain all info + help methods the buttons of Pause screen.
+
 package ui;
 
 import java.awt.Rectangle;

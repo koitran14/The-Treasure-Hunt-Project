@@ -1,3 +1,6 @@
+// Purpose: created to be a source of file reference and provide methods for loading and retrieving
+// various resources needed for a game, such as images for sprites, backgrounds, buttons, and levels.
+
 package utilz;
 
 import java.awt.image.BufferedImage;

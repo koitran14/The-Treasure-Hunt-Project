@@ -1,3 +1,5 @@
+//Purpose: create the panel to render the game.
+
 package main;
 
 import java.awt.Dimension;

@@ -1,3 +1,6 @@
+//Purpose: abstract class for Enemy, used to create
+//update the enemy's behavior, movement, attack and animations.
+
 package entities;
 
 import static utilz.Constants.EnemyConstants.*;
@@ -31,6 +34,8 @@ public abstract class Enemy extends Entity {
 		walkSpeed = Game.SCALE * 0.35f;
 	}
 
+	// updateAttackBox + updateAttackBoxFlip:
+	// used to update the position of the enemy's attack box depending on the enemy's walking direction.
 	protected void updateAttackBox() {
 		attackBox.x = hitbox.x - attackBoxOffsetX;
 		attackBox.y = hitbox.y;
@@ -41,21 +46,23 @@ public abstract class Enemy extends Entity {
 			attackBox.x = hitbox.x + hitbox.width;
 		else
 			attackBox.x = hitbox.x - attackBoxOffsetX;
-
 		attackBox.y = hitbox.y;
 	}
 
+	//Initializes the attack box for the enemy.
 	protected void initAttackBox(int w, int h, int attackBoxOffsetX) {
 		attackBox = new Rectangle2D.Float(x, y, (int) (w * Game.SCALE), (int) (h * Game.SCALE));
 		this.attackBoxOffsetX = (int) (Game.SCALE * attackBoxOffsetX);
 	}
 
+	// Performs a check to see if the enemy is on the floor during its first update.
 	protected void firstUpdateCheck(int[][] lvlData) {
 		if (!IsEntityOnFloor(hitbox, lvlData))
 			inAir = true;
 		firstUpdate = false;
 	}
 
+	// Checks if the enemy is in the air + updates its position accordingly.
 	protected void inAirChecks(int[][] lvlData, Playing playing) {
 		if (state != HIT && state != DEAD) {
 			updateInAir(lvlData);
@@ -65,6 +72,7 @@ public abstract class Enemy extends Entity {
 		}
 	}
 
+	//update animation falling of enemy
 	protected void updateInAir(int[][] lvlData) {
 		if (CanMoveHere(hitbox.x, hitbox.y + airSpeed, hitbox.width, hitbox.height, lvlData)) {
 			hitbox.y += airSpeed;
@@ -76,6 +84,8 @@ public abstract class Enemy extends Entity {
 		}
 	}
 
+	// Moves the enemy based on its walking direction and checks
+	// if there is a floor or wall in front of it.
 	protected void move(int[][] lvlData) {
 		float xSpeed = 0;
 
@@ -89,10 +99,10 @@ public abstract class Enemy extends Entity {
 				hitbox.x += xSpeed;
 				return;
 			}
-
 		changeWalkDir();
 	}
 
+	//Changes the walking direction of the enemy based on the position of the player.
 	protected void turnTowardsPlayer(Player player) {
 		if (player.hitbox.x > hitbox.x)
 			walkDir = RIGHT;
@@ -100,6 +110,7 @@ public abstract class Enemy extends Entity {
 			walkDir = LEFT;
 	}
 
+	// Changes the walking direction of the enemy based on the position of the player.
 	protected boolean canSeePlayer(int[][] lvlData, Player player) {
 		int playerTileY = (int) (player.getHitbox().y / Game.TILES_SIZE);
 		if (playerTileY == tileY)
@@ -110,11 +121,13 @@ public abstract class Enemy extends Entity {
 		return false;
 	}
 
+	// Checks if the player is within the enemy's attack range.
 	protected boolean isPlayerInRange(Player player) {
 		int absValue = (int) Math.abs(player.hitbox.x - hitbox.x);
 		return absValue <= attackDistance * 5;
 	}
 
+	// Checks if the player is close enough for the enemy to attack.
 	protected boolean isPlayerCloseForAttack(Player player) {
 		int absValue = (int) Math.abs(player.hitbox.x - hitbox.x);
 		switch (enemyType) {
@@ -128,6 +141,7 @@ public abstract class Enemy extends Entity {
 		return false;
 	}
 
+	// Checks if the player is close enough for the enemy to attack.
 	public void hurt(int amount) {
 		currentHealth -= amount;
 		if (currentHealth <= 0)
@@ -143,6 +157,7 @@ public abstract class Enemy extends Entity {
 		}
 	}
 
+	//Checks if the enemy's attack box hits the player and reduces the player's health accordingly.
 	protected void checkPlayerHit(Rectangle2D.Float attackBox, Player player) {
 		if (attackBox.intersects(player.hitbox))
 			player.changeHealth(-GetEnemyDmg(enemyType), this);
@@ -153,6 +168,7 @@ public abstract class Enemy extends Entity {
 		attackChecked = true;
 	}
 
+	//Checks if the enemy's attack box hits the player and reduces the player's health accordingly.
 	protected void updateAnimationTick() {
 		aniTick++;
 		if (aniTick >= ANI_SPEED) {
@@ -199,7 +215,6 @@ public abstract class Enemy extends Entity {
 		airSpeed = 0;
 
 		pushDrawOffset = 0;
-
 	}
 
 	public int flipX() {

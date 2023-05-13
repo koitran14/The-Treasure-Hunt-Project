@@ -1,3 +1,5 @@
+//Purpose: to create grass object for the background.
+
 package objects;
 
 public class Grass {

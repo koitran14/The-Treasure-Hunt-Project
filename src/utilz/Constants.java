@@ -1,3 +1,5 @@
+//Purpose: created to save all the constants and easily manage/call out when coding.
+
 package utilz;
 
 import main.Game;
@@ -11,7 +13,6 @@ public class Constants {
 		public static final String MENU = "menu";
 		public static final String ENTITY = "entity";
 		public static final String OBJECT = "obj";
-
 	}
 
 	public static class Dialogue {
@@ -26,7 +27,6 @@ public class Constants {
 				case QUESTION, EXCLAMATION:
 					return 5;
 			}
-
 			return 0;
 		}
 	}
@@ -37,7 +37,7 @@ public class Constants {
 
 		public static final int CANNON_BALL_WIDTH = (int) (Game.SCALE * CANNON_BALL_DEFAULT_WIDTH);
 		public static final int CANNON_BALL_HEIGHT = (int) (Game.SCALE * CANNON_BALL_DEFAULT_HEIGHT);
-		public static final float SPEED = 0.6f * Game.SCALE;
+		public static final float SPEED = 0.5f * Game.SCALE;
 	}
 
 	public static class ObjectConstants {
@@ -97,7 +97,6 @@ public class Constants {
 				case TREE_THREE:
 					return (int) (Game.TILES_SIZE / 1.65f);
 			}
-
 			return 0;
 		}
 
@@ -121,7 +120,6 @@ public class Constants {
 					return (int) (62 * Game.SCALE);
 				case TREE_THREE:
 					return -(int) (62 * Game.SCALE);
-
 			}
 			return 0;
 		}
@@ -132,7 +130,6 @@ public class Constants {
 					return (int) (int) (92 * Game.SCALE);
 				case TREE_TWO, TREE_THREE:
 					return (int) (54 * Game.SCALE);
-
 			}
 			return 0;
 		}
