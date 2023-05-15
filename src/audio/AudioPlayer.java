@@ -28,7 +28,7 @@ public class AudioPlayer {
 
     private Clip[] songs, effects;
     private int currentSongId; // What kinds of song we have
-    private float volume = 0.5f; //koi fixed this volume to make it louder because it's still small
+    private float volume = 0.7f; //koi fixed this volume to make it louder because it's still small
     private boolean songMute, effectMute;
     private Random rand = new Random(); // Attack sounds, co 3 cai
 
