@@ -2,7 +2,7 @@
 
 package objects;
 
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -241,12 +241,16 @@ public class ObjectManager {
 		for (Cannon c : currentLevel.getCannons()) {
 			int x = (int) (c.getHitbox().x - xLvlOffset);
 			int width = CANNON_WIDTH;
+			boolean checkDirOfCannon = false;
 
 			if (c.getObjType() == CANNON_RIGHT) {
+				checkDirOfCannon = true;
 				x += width;
 				width *= -1;
 			}
 			g.drawImage(cannonImgs[c.getAniIndex()], x, (int) (c.getHitbox().y), width, CANNON_HEIGHT, null);
+//			drawHitbox(g, (int) (c.getHitbox().x - xLvlOffset), (int) (c.getHitbox().y));
+//			drawAttackBox(g, x, (int) c.getHitbox().y, checkDirOfCannon);
 		}
 	}
 
@@ -287,4 +291,19 @@ public class ObjectManager {
 		for (Cannon c : currentLevel.getCannons())
 			c.reset();
 	}
+
+	// used to check the Attack area
+	protected void drawAttackBox(Graphics g, int x, int y, boolean checkDir) {
+		g.setColor(Color.BLUE);
+		int temp = x;
+		if (!checkDir)
+			temp -= Game.TILES_SIZE * 4;
+		g.drawRect(temp, y, Game.TILES_SIZE * 4, CANNON_HEIGHT);
+	}
+	// used to check the Hitbox area
+	protected void drawHitbox(Graphics g, int x, int y) {
+		g.setColor(Color.RED);
+		g.drawRect(x,y, CANNON_WIDTH,CANNON_HEIGHT);
+	}
+
 }
