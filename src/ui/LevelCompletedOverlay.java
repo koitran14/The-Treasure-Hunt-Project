@@ -11,6 +11,7 @@ import java.io.File;
 
 import gamestates.Gamestate;
 import gamestates.Playing;
+import levels.LevelManager;
 import main.Game;
 import utilz.Constants;
 import utilz.LoadSave;
@@ -84,7 +85,6 @@ public class LevelCompletedOverlay {
 				playing.loadNextLevel();
 				playing.getGame().getAudioPlayer().setLevelSong(playing.getLevelManager().getLevelIndex());
 			}
-
 		menu.resetBools();
 		next.resetBools();
 	}

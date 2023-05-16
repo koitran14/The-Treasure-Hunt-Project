@@ -50,7 +50,7 @@ public class Shark extends Enemy {
                         attackChecked = false;
                     else if (aniIndex == 3) {
                         if (!attackChecked)
-                            checkPlayerHit(attackBox, playing.getPlayer());
+                            checkPlayerHit(attackBox, playing.getPlayer(), playing);
                         attackMove(lvlData, playing);
                     }
 

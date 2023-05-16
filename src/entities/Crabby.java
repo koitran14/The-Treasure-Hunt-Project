@@ -57,7 +57,7 @@ public class Crabby extends Enemy {
 					if (aniIndex == 0)
 						attackChecked = false;
 					if (aniIndex == 3 && !attackChecked)
-						checkPlayerHit(attackBox, playing.getPlayer());
+						checkPlayerHit(attackBox, playing.getPlayer(), playing);
 					break;
 				case HIT:
 					if (aniIndex <= GetSpriteAmount(enemyType, state) - 2)

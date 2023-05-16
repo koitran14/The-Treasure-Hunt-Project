@@ -24,7 +24,6 @@ public class Menu extends State implements Statemethods {
 		loadButtons();
 		loadBackground();
 		backgroundImgPink = LoadSave.GetSpriteAtlas( LoadSave.MENU_BACKGROUND_IMG, Constants.FileType.MENU);
-
 	}
 
 	private void loadBackground() {

@@ -6,7 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="137009ce-13a4-4c4c-ad2e-c8ccd302dceb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/objects/ObjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/objects/ObjectManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/entities/Crabby.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/entities/Crabby.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/entities/Enemy.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/entities/Enemy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/entities/Shark.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/entities/Shark.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/objects/ObjectManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/objects/ObjectManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP.Project/ui/LevelCompletedOverlay.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP.Project/ui/LevelCompletedOverlay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Crabby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Crabby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Enemy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Shark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Shark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gamestates/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gamestates/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ui/LevelCompletedOverlay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/LevelCompletedOverlay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,14 +38,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/koi/Final Project/OOP.Project",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/koi/Final Project/OOP.Project&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.MainClass" />

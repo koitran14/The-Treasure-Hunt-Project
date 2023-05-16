@@ -3,6 +3,7 @@
 
 package entities;
 
+import static utilz.Constants.Dialogue.QUESTION;
 import static utilz.Constants.EnemyConstants.*;
 import static utilz.HelpMethods.*;
 
@@ -158,12 +159,13 @@ public abstract class Enemy extends Entity {
 	}
 
 	//Checks if the enemy's attack box hits the player and reduces the player's health accordingly.
-	protected void checkPlayerHit(Rectangle2D.Float attackBox, Player player) {
+	protected void checkPlayerHit(Rectangle2D.Float attackBox, Player player, Playing playing) {
 		if (attackBox.intersects(player.hitbox))
 			player.changeHealth(-GetEnemyDmg(enemyType), this);
 		else {
 			if (enemyType == SHARK)
 				return;
+			playing.addDialogue((int) hitbox.x, (int) hitbox.y, QUESTION);
 		}
 		attackChecked = true;
 	}

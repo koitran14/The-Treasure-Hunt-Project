@@ -123,7 +123,6 @@ public class Player extends Entity {
 						inAir = false;
 
 			}
-
 			return;
 		}
 
