@@ -65,18 +65,15 @@ public class GameCompletedOverlay {
 
     public void mouseReleased(MouseEvent e) {
         if (isIn(quit, e)) {
-            if (quit.isMousePressed()) {
-                playing.resetAll();
-                playing.resetGameCompleted();
-                playing.setGamestate(Gamestate.MENU);
-            }
             quit.resetBools();
         }
     }
 
     public void mousePressed(MouseEvent e){
-        if (isIn(quit, e))
+        if (isIn(quit, e)){
             quit.setMousePressed(true);
+            System.exit(0);
+        }
         quit.resetBools();
     }
 }
