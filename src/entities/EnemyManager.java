@@ -1,4 +1,11 @@
-//Purpose: manage the enemy entities in the game, updating and drawing.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: manage the enemy entities in the game, updating and drawing. */
 
 package entities;
 
@@ -122,9 +129,12 @@ public class EnemyManager {
 
 	//get + load the enemy images into the game.
 	private void loadEnemyImgs() {
-		crabbyArr = getImgArr(LoadSave.GetSpriteAtlas(LoadSave.CRABBY_SPRITE, FileType.ENTITY), 9, 5, CRABBY_WIDTH_DEFAULT, CRABBY_HEIGHT_DEFAULT);
-		pinkstarArr = getImgArr(LoadSave.GetSpriteAtlas(LoadSave.PINKSTAR_ATLAS, FileType.ENTITY), 8, 5, PINKSTAR_WIDTH_DEFAULT, PINKSTAR_HEIGHT_DEFAULT);
-		sharkArr = getImgArr(LoadSave.GetSpriteAtlas(LoadSave.SHARK_ATLAS, FileType.ENTITY), 8, 5, SHARK_WIDTH_DEFAULT, SHARK_HEIGHT_DEFAULT);
+		crabbyArr = getImgArr(LoadSave.GetSpriteAtlas(LoadSave.CRABBY_SPRITE, FileType.ENTITY),
+				9, 5, CRABBY_WIDTH_DEFAULT, CRABBY_HEIGHT_DEFAULT);
+		pinkstarArr = getImgArr(LoadSave.GetSpriteAtlas(LoadSave.PINKSTAR_ATLAS, FileType.ENTITY),
+				8, 5, PINKSTAR_WIDTH_DEFAULT, PINKSTAR_HEIGHT_DEFAULT);
+		sharkArr = getImgArr(LoadSave.GetSpriteAtlas(LoadSave.SHARK_ATLAS, FileType.ENTITY),
+				8, 5, SHARK_WIDTH_DEFAULT, SHARK_HEIGHT_DEFAULT);
 	}
 
 	private BufferedImage[][] getImgArr(BufferedImage atlas, int xSize, int ySize, int spriteW, int spriteH) {

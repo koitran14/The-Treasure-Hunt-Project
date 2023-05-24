@@ -1,4 +1,11 @@
-//Purpose: define and store the properties + behaviors of the tree factors.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose:  define and store the properties + behaviors of the tree elements. */
 
 package objects;
 

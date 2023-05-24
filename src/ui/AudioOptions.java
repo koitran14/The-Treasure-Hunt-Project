@@ -1,5 +1,12 @@
-// Purpose: used for drawing the audio options menu on the game's screen
-// and updating the state of the audio options buttons and volume slider when necessary.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose:  used for drawing the audio options menu on the game's screen and
+updating the state of the audio options buttons and volume slider when necessary.*/
 
 package ui;
 

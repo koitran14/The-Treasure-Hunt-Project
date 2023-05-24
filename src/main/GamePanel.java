@@ -1,4 +1,12 @@
-//Purpose: create the panel to render the game.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose:  create the panel to render the game. */
+
 
 package main;
 
@@ -30,7 +38,6 @@ public class GamePanel extends JPanel {
 	}
 
 	public void updateGame() {
-
 	}
 
 	public void paintComponent(Graphics g) {

@@ -1,8 +1,14 @@
-//Purpose: represents the player's avatar in a game.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: define behavior and properties of main character in the game. */
 
 package entities;
 
-import static utilz.Constants.Dialogue.QUESTION;
 import static utilz.Constants.PlayerConstants.*;
 import static utilz.HelpMethods.*;
 import static utilz.Constants.*;
@@ -221,7 +227,9 @@ public class Player extends Entity {
 	}
 
 	public void render(Graphics g, int lvlOffset) {
-		g.drawImage(animations[state][aniIndex], (int) (hitbox.x - xDrawOffset) - lvlOffset + flipX, (int) (hitbox.y - yDrawOffset + (int) (pushDrawOffset)), width * flipW, height, null);
+		g.drawImage(animations[state][aniIndex],
+				(int) (hitbox.x - xDrawOffset) - lvlOffset + flipX, (int) (hitbox.y - yDrawOffset + (int) (pushDrawOffset)),
+				width * flipW, height, null);
 //		drawHitbox(g, lvlOffset);
 //		drawAttackBox(g, lvlOffset);
 		drawUI(g);

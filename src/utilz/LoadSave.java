@@ -1,5 +1,12 @@
-// Purpose: created to be a source of file reference and provide methods for loading and retrieving
-// various resources needed for a game, such as images for sprites, backgrounds, buttons, and levels.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: created to be a source of file reference and provide methods for loading and retrieving
+various resources needed for a game, such as images for sprites, backgrounds, buttons, and levels.*/
 
 package utilz;
 

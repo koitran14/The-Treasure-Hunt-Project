@@ -1,5 +1,11 @@
-//Purpose: defines an object representing a visual effect
-// of raindrops falling down the screen.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: defines an object representing a visual effect of raindrops falling down the screen. */
 
 package effects;
 
@@ -19,8 +25,6 @@ public class Rain {
     private float rainSpeed = 1.3f;
     private BufferedImage rainParticle;
 
-    // Worth knowing, adding particles this way can cost a lot in
-    // computer power. Disable it if the game lags.
     public Rain() {
         rand = new Random();
         drops = new Point2D.Float[1000]; // -> store the positions of raindrops
@@ -63,5 +67,4 @@ public class Rain {
         for (Point2D.Float p : drops)
             g.drawImage(rainParticle, (int) p.getX() - xLvlOffset, (int) p.getY(), 3, 12, null);
     }
-
 }

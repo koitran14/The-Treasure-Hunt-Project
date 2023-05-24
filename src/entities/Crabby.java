@@ -1,7 +1,11 @@
-//Purpose:
-// define a "Crabby" enemy in a game.
-// It extends the "Enemy" class and overrides some of its methods
-// to define the behavior of this specific type of enemy.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: define a "Crabby" enemy's properties in a game. */
 
 package entities;
 

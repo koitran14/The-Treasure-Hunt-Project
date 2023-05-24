@@ -1,3 +1,12 @@
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: contain all the methods of gamestate class to handle input events of keyboard.*/
+
 package inputs;
 
 import java.awt.event.KeyEvent;
@@ -22,7 +31,6 @@ public class KeyboardInputs implements KeyListener {
 		}
 	}
 
-	@SuppressWarnings("incomplete-switch")
 	@Override
 	public void keyPressed(KeyEvent e) {
 		switch (Gamestate.state) {

@@ -1,5 +1,14 @@
-// Purpose: displaying a level completed overlay when the player finishes a level in the game,
-// can step into the next level by "next button" or return to the main menu by "menu button".
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: displaying a level completed overlay when the player finishes a level in the game,
+can step into the next level by "next button" or return to the main menu by "menu button".*/
+
+
 
 package ui;
 

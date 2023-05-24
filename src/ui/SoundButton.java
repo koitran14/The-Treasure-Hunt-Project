@@ -1,8 +1,11 @@
-// Purpose: to represent a button that can be clicked to toggle sound on and off.
-// It extends the PauseButton class, which likely provides some common functionality for buttons used in a pause menu.
-// loads and stores images for the different states of the button (muted/unmuted, mouse over, mouse pressed).
-// and provides methods for updating and drawing the button based on its current state. It also provides methods
-// for getting and setting the button's state (muted or not muted).
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: to create the sound buttons.*/
 
 package ui;
 

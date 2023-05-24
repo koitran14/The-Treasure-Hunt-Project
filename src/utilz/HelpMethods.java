@@ -1,4 +1,12 @@
-//Purpose: including all the utility functions that support to check some entities/objects' properties in coding.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: including all the utility functions that support to check some entities/objects' properties in coding.*/
+
 package utilz;
 
 import java.awt.geom.Rectangle2D;
@@ -106,7 +114,8 @@ public class HelpMethods {
 		return true;
 	}
 
-	public static boolean CanCannonSeePlayer(int[][] lvlData, Rectangle2D.Float firstHitbox, Rectangle2D.Float secondHitbox, int yTile) {
+	public static boolean CanCannonSeePlayer(int[][] lvlData, Rectangle2D.Float firstHitbox,
+											 Rectangle2D.Float secondHitbox, int yTile) {
 		int firstXTile = (int) (firstHitbox.x / Game.TILES_SIZE);
 		int secondXTile = (int) (secondHitbox.x / Game.TILES_SIZE);
 

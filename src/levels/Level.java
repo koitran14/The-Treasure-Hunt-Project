@@ -1,4 +1,11 @@
-//Purpose: load and store information about a game level.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: load and store the RGB code to load on the map.*/
 
 package levels;
 
@@ -48,11 +55,6 @@ public class Level {
 	}
 
 	private void loadLevel() {
-
-		// Looping through the image colors just once. Instead of one per
-		// object/enemy/etc..
-		// Removed many methods in HelpMethods class.
-
 		for (int y = 0; y < img.getHeight(); y++)
 			for (int x = 0; x < img.getWidth(); x++) {
 				Color c = new Color(img.getRGB(x, y));

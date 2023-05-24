@@ -1,4 +1,11 @@
-//Purpose: to manage the objects in the game and their interactions with each other.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose:  to manage the objects in the game and their interactions with each other.*/
 
 package objects;
 
@@ -76,7 +83,8 @@ public class ObjectManager {
 					int type = 0;
 					if (gc.getObjType() == BARREL)
 						type = 1;
-					potions.add(new Potion((int) (gc.getHitbox().x + gc.getHitbox().width / 2), (int) (gc.getHitbox().y - gc.getHitbox().height / 2), type));
+					potions.add(new Potion((int) (gc.getHitbox().x + gc.getHitbox().width / 2),
+							(int) (gc.getHitbox().y - gc.getHitbox().height / 2), type));
 					return;
 				}
 			}

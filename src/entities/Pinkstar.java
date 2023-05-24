@@ -1,4 +1,12 @@
-//Purpose: define behavior and properties of Pinkstar enemies in the game.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: define behavior and properties of Pinkstar enemies in the game. */
+
 
 package entities;
 
@@ -33,6 +41,7 @@ public class Pinkstar extends Enemy {
 
         if (inAir)
             inAirChecks(lvlData, playing);
+
         else {
             switch (state) {
                 case IDLE:
@@ -54,6 +63,7 @@ public class Pinkstar extends Enemy {
                     }
                     move(lvlData, playing);
                     break;
+
                 case ATTACK:
                     if (preRoll) {
                         if (aniIndex >= 3)

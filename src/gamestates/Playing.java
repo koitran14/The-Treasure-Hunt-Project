@@ -1,5 +1,11 @@
-// Purpose: manage the game state while the player
-// is actually playing the game and featured related to.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: manage the game state while the player is actually playing the game and featured related to. */
 
 package gamestates;
 
@@ -183,7 +189,6 @@ public class Playing extends State implements Statemethods {
 			if (shipAni >= 4)
 				shipAni = 0;
 		}
-
 		shipHeightDelta += shipHeightChange * shipDir;
 		shipHeightDelta = Math.max(Math.min(10 * Game.SCALE, shipHeightDelta), 0);
 
@@ -191,7 +196,6 @@ public class Playing extends State implements Statemethods {
 			shipDir = 1;
 		else if (shipHeightDelta == 10 * Game.SCALE)
 			shipDir = -1;
-
 	}
 
 	private void updateDialogue() {
@@ -241,7 +245,8 @@ public class Playing extends State implements Statemethods {
 			rain.draw(g, xLvlOffset);
 
 		if (drawShip)
-			g.drawImage(shipImgs[shipAni], (int) (100 * Game.SCALE) - xLvlOffset, (int) ((288 * Game.SCALE) + shipHeightDelta), (int) (78 * Game.SCALE), (int) (72 * Game.SCALE), null);
+			g.drawImage(shipImgs[shipAni], (int) (100 * Game.SCALE) - xLvlOffset,
+					(int) ((288 * Game.SCALE) + shipHeightDelta), (int) (78 * Game.SCALE), (int) (72 * Game.SCALE), null);
 
 		levelManager.draw(g, xLvlOffset);
 		objectManager.draw(g, xLvlOffset);

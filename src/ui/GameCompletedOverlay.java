@@ -1,6 +1,13 @@
-// Purpose: to handle the drawing and updating of the game completed overlay, including the image and menu button.
-// It also handles user input events such as mouse movements and mouse clicks on the menu button to reset the game
-// and return to the main menu.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: to handle the drawing and updating of the game completed overlay, including the image and menu button.
+It also handles user input events such as mouse movements and mouse clicks on the menu button to reset the game
+and return to the main menu.*/
 
 package ui;
 

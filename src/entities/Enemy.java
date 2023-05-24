@@ -1,5 +1,11 @@
-//Purpose: abstract class for Enemy, used to create
-//update the enemy's behavior, movement, attack and animations.
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose: abstract class for Enemy, used to create and update the enemy's behavior, movement, attack and animations. */
 
 package entities;
 

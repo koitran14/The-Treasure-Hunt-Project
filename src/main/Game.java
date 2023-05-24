@@ -1,11 +1,17 @@
-//Purpose:  create a game loop + manage the game states for a 2D game
+/*
+Member:
+1. Tran Ngoc Dang Khoi - ITCSIU21197
+2. Nguyen Tran Hoang Ha - ITITIU21127
+3. Ha Van Uyen Nhi - ITCSIU21095
+4. Nguyen Hoang Quan - ITITIU21291
+
+*Purpose:  create a game loop + manage the game states for a 2D game*/
 
 package main;
 
 import java.awt.Graphics;
 
 import audio.AudioPlayer;
-//import gamestates.Credits;
 import gamestates.GameOptions;
 import gamestates.Gamestate;
 import gamestates.Menu;
@@ -88,7 +94,6 @@ public class Game implements Runnable {
 		double deltaF = 0;
 
 		while (true) {
-
 			long currentTime = System.nanoTime();
 
 			deltaU += (currentTime - previousTime) / timePerUpdate;
@@ -96,11 +101,9 @@ public class Game implements Runnable {
 			previousTime = currentTime;
 
 			if (deltaU >= 1) {
-
 				update();
 				updates++;
 				deltaU--;
-
 			}
 			if (deltaF >= 1) {
 				gamePanel.repaint();
