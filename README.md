@@ -93,7 +93,7 @@ Furthermore, the game possesses several constraints. To be specific, the game re
 ## References
 
 ### Tutorials and Documentation
-- [Treasure Hunter - The Inspirational Concept](https://pixelfrog-assets.itch.io/treasure-hunters): The official resource of animations for the project, including main character, weapons, enermies and environmental elements,...
+- [Treasure Hunter - The Inspirational Concept](https://pixelfrog-assets.itch.io/treasure-hunters): The official resource of animations for this project, including main character, weapons, enermies and environmental elements,...
 - [Java Game Development Tutorial - Kaarin Gaming](https://youtu.be/6_N8QZ47toY): A playlist of video tutorials covering various aspects of the project.
 
 ### External Libraries and Frameworks
