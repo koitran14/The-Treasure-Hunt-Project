@@ -53,7 +53,7 @@ For more detailed information, you can find out in this [file](https://github.co
 ### ✨ Menu Navigation: 
 - Use the mouse click to select options in the game's menu. 
 - Press _`Ecs`_ to pause the game.
-<br>
+
 
 ### ✨ About character:
 - Stats of character: _`200HP`_ and _`200PP`_ maximum, _`automatic PP-recovery only`_.
@@ -61,7 +61,7 @@ For more detailed information, you can find out in this [file](https://github.co
 - Attack: Use _`right-click`_ to attack, _`left-click`_ for the faster.
 > Note: `the quick attack` is required a huge energy consumption,
 <br>and you could use it with "Jump" to surf in the air.
-<br>
+
 
 ### ✨ Items:
 - Potions: to recover stats of character with _`RED_POTION`_ for HP and _`BLUE_POTION`_ for PP.
