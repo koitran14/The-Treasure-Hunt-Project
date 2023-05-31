@@ -60,7 +60,7 @@ For more detailed information, you can find out in this [file](https://github.co
 - Movement: _`A`_, _`D`_ and _`SPACEBAR`_ to move _left_, _right_ and _jump_ on the grid.
 - Attack: Use _`right-click`_ to attack, _`left-click`_ for the faster.
 > Note: `the quick attack` is required a huge energy consumption,
-<br>and you could use it with "Jump" to surf in the air.
+<br>and you could use it with _`SPACEBAR`_ to surf in the air.
 
 
 ### ✨ Items:
