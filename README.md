@@ -31,7 +31,7 @@ _"The Treasure Hunt"_ is a platform game where players control a pirate characte
 To do this project, we use: 
 - Language: `Java`
 - Library: `Java.awt`
-- Editor: `IntelliJ`, `Vscode`, `Esclipe`.
+- IDE: `IntelliJ`, `Vscode`, `Esclipe`.
 
 ## Methodology
 
@@ -80,7 +80,7 @@ Once the download is complete from github, you can launch the game in two ways:
 ...\OOP.Project\src> java MainClass
 ```
 ### ✨ By Editor (VsCode, IntelliJ, Esclipe):
-Just open this project in your editor, then enjoy 😉
+Just open this project in your IDE, then enjoy 😉
 
 
 
