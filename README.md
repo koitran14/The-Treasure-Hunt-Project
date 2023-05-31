@@ -105,4 +105,4 @@ Furthermore, the game possesses several constraints. To be specific, the game re
 - [Dr. Kieu Vu Thanh Tung](https://it.hcmiu.edu.vn/user/kvttung/): Provided valuable feedback and suggestions throughout the project's development.
 <br>
 
-**Thanks for reading, hope you enjoy this game 💖**
+**Thanks for reading, please enjoy 💖**
