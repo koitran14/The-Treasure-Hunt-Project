@@ -21,7 +21,7 @@ Consequently, our team has made the choice to utilize Java.Swing (Java.awt) as t
 
 ### After this project, we aim to gain:
 - Deep learning of Object-Oriented Programming's Principles✨
-- Process of game development and some✨
+- Process of game development and some tricks✨
 - Teamworks✨
 
 ## About the game
