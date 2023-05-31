@@ -80,7 +80,7 @@ Once the download is complete from github, you can launch the game in two ways:
 ...\OOP.Project\src> java MainClass
 ```
 ### ✨ By Editor (VsCode, IntelliJ, Esclipe):
-Just open the file in your editor, then enjoy 😉
+Just open this project in your editor, then enjoy 😉
 
 
 
