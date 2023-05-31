@@ -104,4 +104,5 @@ Furthermore, the game possesses several constraints. To be specific, the game re
 - [Dr. Le Duy Tan](): Made significant contributions, particularly in Object-Oriented Programming's standard knowledge, which supporting for whole concept of project.
 - [Dr. Kieu Vu Thanh Tung](): Provided valuable feedback and suggestions throughout the project's development.
 
+<br>
 **Thanks for reading, hope you enjoy this game!**
