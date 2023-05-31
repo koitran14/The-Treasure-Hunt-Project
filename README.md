@@ -56,7 +56,7 @@ For more detailed information, you can find out in this [file](https://github.co
 
 
 ### ✨ About character:
-- Stats of character: _`200HP`_ and _`200PP`_ maximum, _`automatic PP-recovery only`_.
+- Stats of character: _`200HP`_ and _`200PP`_ maximum, **automatic PP-recovery only**.
 - Movement: _`A`_, _`D`_ and _`SPACEBAR`_ to move _left_, _right_ and _jump_ on the grid.
 - Attack: Use _`right-click`_ to attack, _`left-click`_ for the faster.
 > Note: `the quick attack` is required a huge energy consumption,
