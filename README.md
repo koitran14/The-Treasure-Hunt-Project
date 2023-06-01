@@ -108,5 +108,5 @@ Furthermore, the game possesses several constraints. To be specific, the game re
 - To know more about our project, read [me](https://github.com/koitran14/The-Treasure-Hunt-Project/blob/main/The%20Treasure%20Hunt%20report.pdf).
 <br>
 
-**Thanks for reading 💖**
-If you have any question, please contact: khoitranngocdg@gmail.com
+#### Thanks for reading 💖
+_If you have any question, please contact: khoitranngocdg@gmail.com_
