@@ -92,7 +92,7 @@ To summarize, the development of the Treasure Hunt game was made easier and more
 Furthermore, the game possesses several constraints. To be specific, the game remains unfinished due to time constraints and a lack of sufficient experience and expertise. Consequently, the classes and methods lack proper organization, efficiency, and cleanliness, making testing a rather complex task. Most importantly, the team encountered challenges in constructing, coordinating, and assigning tasks, occasionally necessitating starting over due to inexperience and confusion in the game development process.
 ## References
 
-### Tutorials and Documentation
+### Tutorials and Resources
 - [Treasure Hunter - Pixel Frog](https://pixelfrog-assets.itch.io/treasure-hunters): The main source of inspirational concept and animations for this project, including main character, weapons, enemies and environmental elements,...
 - [Java Game Development Tutorial - Kaarin Gaming](https://youtu.be/6_N8QZ47toY): A playlist of video tutorials covering various aspects of the project.
 
@@ -104,8 +104,8 @@ Furthermore, the game possesses several constraints. To be specific, the game re
 - [Dr. Le Duy Tan](https://it.hcmiu.edu.vn/user/ldtan/): Made significant contributions, particularly in Object-Oriented Programming's standard knowledge, which supported for the whole concept of project.
 - [Dr. Kieu Vu Thanh Tung](https://it.hcmiu.edu.vn/user/kvttung/): Provided valuable feedback and suggestions throughout the project's development.
 
-
-_**To know more about our project, read [me](https://github.com/koitran14/The-Treasure-Hunt-Project/blob/main/The%20Treasure%20Hunt%20report.pdf).**_
+### Documentation
+_ To know more about our project, read [me](https://github.com/koitran14/The-Treasure-Hunt-Project/blob/main/The%20Treasure%20Hunt%20report.pdf).**_
 
 
 **Thanks for reading, please enjoy 💖**
