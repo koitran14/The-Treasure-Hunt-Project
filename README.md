@@ -28,7 +28,7 @@ Consequently, our team has made the choice to utilize Java.Swing (Java.awt) as t
 
 ## About the game
 _"The Treasure Hunt"_ is a platform game where players control a pirate character, _Captain Jack_, navigating through levels filled with challenges and enemies. The game features a two-dimensional side-scrolling environment where players must jump over gaps, dodge hazards, and defeat aggressive enemies with swords. Cannons and traps add additional obstacles throughout the game. The levels progressively increase in difficulty, providing an engaging and challenging experience. The unique pirate theme and the presence of crabs as enemies add a distinctive flavor to the game, aiming to provide players with a fun and immersive experience.
-<hr>
+
 
 ## Technique 
 To do this project, we use: 
