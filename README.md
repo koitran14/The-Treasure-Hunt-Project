@@ -35,7 +35,7 @@ To do this project, we use:
 - Language: `Java`
 - Library: `Java.awt`
 - IDE: `IntelliJ`, `VsCode`, `Esclipe`.
-<hr>
+
 
 ## Methodology
 
