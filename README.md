@@ -8,6 +8,7 @@
 In today’s rapid evolution of technology industry, there is an increasing need for continuous learning and updating of knowledge. To facilitate the adoption of new ideas, Object-Oriented Programming has emerged as a robust paradigm for organizing projects that including code more reusability, modularity, maintainability, and scalability, to embrace new algorithms more easily and systematically.
 
 Consequently, our team has made the choice to utilize Java.Swing (Java.awt) as the primary library for coding and implementing Object-Oriented Programming (OOP) in our game project, _“The Treasure Hunt”_. This decision was made in order to evaluate the viability of the principles inherent in this model. Furthermore, our goals encompassed enhancing our proficiency in collaborative projects and obtaining a more comprehensive comprehension of the game development process.
+<hr>
 
 ### Team members:
 
@@ -17,21 +18,24 @@ Consequently, our team has made the choice to utilize Java.Swing (Java.awt) as t
 | 2 | [Nguyen Tran Hoang Ha](https://github.com/HoangHaITITIU21127) | ITITIU21127 | 
 | 3 | [Ha Van Uyen Nhi](https://github.com/Jay2717) | ITCSIU21095 |
 | 4 | [Nguyen Hoang Quan](https://github.com/Quanchip) | ITITIU21291 |
-
+<hr>
 
 ### After this project, we aim to gain:
 - Deep learning of Object-Oriented Programming's Principles✨
 - Process of game development and some tricks✨
 - Teamwork skills✨
+<hr>
 
 ## About the game
 _"The Treasure Hunt"_ is a platform game where players control a pirate character, _Captain Jack_, navigating through levels filled with challenges and enemies. The game features a two-dimensional side-scrolling environment where players must jump over gaps, dodge hazards, and defeat aggressive enemies with swords. Cannons and traps add additional obstacles throughout the game. The levels progressively increase in difficulty, providing an engaging and challenging experience. The unique pirate theme and the presence of crabs as enemies add a distinctive flavor to the game, aiming to provide players with a fun and immersive experience.
+<hr>
 
 ## Technique 
 To do this project, we use: 
 - Language: `Java`
 - Library: `Java.awt`
 - IDE: `IntelliJ`, `VsCode`, `Esclipe`.
+<hr>
 
 ## Methodology
 
