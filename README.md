@@ -113,4 +113,4 @@ Furthermore, the game possesses several constraints. To be specific, the game re
 <br>
 
 ### Thanks for reading 💖
-- _If you have any question, please contact: tndkhoi.work@gmail.com_
+_If you have any question, please contact: tndkhoi.work@gmail.com_
