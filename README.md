@@ -8,6 +8,7 @@
 In today’s rapid evolution of technology industry, there is an increasing need for continuous learning and updating of knowledge. To facilitate the adoption of new ideas, Object-Oriented Programming has emerged as a robust paradigm for organizing projects that including code more reusability, modularity, maintainability, and scalability, to embrace new algorithms more easily and systematically.
 
 Consequently, our team has made the choice to utilize Java.Swing (Java.awt) as the primary library for coding and implementing Object-Oriented Programming (OOP) in our game project, _“The Treasure Hunt”_. This decision was made in order to evaluate the viability of the principles inherent in this model. Furthermore, our goals encompassed enhancing our proficiency in collaborative projects and obtaining a more comprehensive comprehension of the game development process.
+[Visit OpenAI](https://openai.com){:target="_blank"}
 
 
 ### Team members:
