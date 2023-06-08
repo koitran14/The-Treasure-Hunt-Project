@@ -14,10 +14,10 @@ Consequently, our team has made the choice to utilize Java.Swing (Java.awt) as t
 
 | Order | Full name | ID |
 | ------ | ------ | ------ |
-| 1 | [Tran Ngoc Dang Khoi](https://github.com/koitran14) | ITCSIU21197 |
-| 2 | [Nguyen Tran Hoang Ha](https://github.com/HoangHaITITIU21127) | ITITIU21127 | 
-| 3 | [Ha Van Uyen Nhi](https://github.com/Jay2717) | ITCSIU21095 |
-| 4 | [Nguyen Hoang Quan](https://github.com/Quanchip) | ITITIU21291 |
+| 1 | [Tran Ngoc Dang Khoi](https://github.com/koitran14){:tager="blank"} | ITCSIU21197 |
+| 2 | [Nguyen Tran Hoang Ha](https://github.com/HoangHaITITIU21127){:tager="blank"} | ITITIU21127 | 
+| 3 | [Ha Van Uyen Nhi](https://github.com/Jay2717){:tager="blank"} | ITCSIU21095 |
+| 4 | [Nguyen Hoang Quan](https://github.com/Quanchip){:tager="blank"} | ITITIU21291 |
 
 
 ### After this project, we aim to gain:
@@ -51,7 +51,7 @@ To do this game, we create 10 packages to operate 10 main features of the game:
 9. Effects package
 10. Utilz package
 
-For more detailed information, you can find out in this [file](https://github.com/koitran14/The-Treasure-Hunt-Project/blob/main/The%20Treasure%20Hunt%20report.pdf).
+For more detailed information, you can find out in this [file](https://github.com/koitran14/The-Treasure-Hunt-Project/blob/main/The%20Treasure%20Hunt%20report.pdf){:tager="blank"}.
 
 ## User manual
 ### ✨ Menu Navigation: 
@@ -97,19 +97,19 @@ Furthermore, the game possesses several constraints. To be specific, the game re
 ## References
 
 ### Tutorials and Resources
-- [Treasure Hunter - Pixel Frog](https://pixelfrog-assets.itch.io/treasure-hunters): The main source of inspirational concept and animations for this project, including main character, weapons, enemies and environmental elements,...
-- [Java Game Development Tutorial - Kaarin Gaming](https://youtu.be/6_N8QZ47toY): A playlist of video tutorials covering various aspects of the project.
+- [Treasure Hunter - Pixel Frog](https://pixelfrog-assets.itch.io/treasure-hunters){:tager="blank"}: The main source of inspirational concept and animations for this project, including main character, weapons, enemies and environmental elements,...
+- [Java Game Development Tutorial - Kaarin Gaming](https://youtu.be/6_N8QZ47toY){:tager="blank"}: A playlist of video tutorials covering various aspects of the project.
 
 ### External Libraries and Frameworks
-- [Java AWT](https://www.geeksforgeeks.org/what-is-java-awt-graphics/): A powerful library used in this project for Graphics. 
+- [Java AWT](https://www.geeksforgeeks.org/what-is-java-awt-graphics/){:tager="blank"}: A powerful library used in this project for Graphics. 
 
 
 ### Acknowledgements
-- [Dr. Le Duy Tan](https://it.hcmiu.edu.vn/user/ldtan/): Made significant contributions, particularly in Object-Oriented Programming's standard knowledge, which supported for the whole concept of project.
-- [Dr. Kieu Vu Thanh Tung](https://it.hcmiu.edu.vn/user/kvttung/): Provided valuable feedback and suggestions throughout the project's development.
+- [Dr. Le Duy Tan](https://it.hcmiu.edu.vn/user/ldtan/){:tager="blank"}: Made significant contributions, particularly in Object-Oriented Programming's standard knowledge, which supported for the whole concept of project.
+- [Dr. Kieu Vu Thanh Tung](https://it.hcmiu.edu.vn/user/kvttung/){:tager="blank"}: Provided valuable feedback and suggestions throughout the project's development.
 
 ### Documentation
-- To know more about our project, read [me](https://github.com/koitran14/The-Treasure-Hunt-Project/blob/main/The%20Treasure%20Hunt%20report.pdf).
+- To know more about our project, read [me](https://github.com/koitran14/The-Treasure-Hunt-Project/blob/main/The%20Treasure%20Hunt%20report.pdf){:tager="blank"}.
 <br>
 
 ### Thanks for reading 💖
