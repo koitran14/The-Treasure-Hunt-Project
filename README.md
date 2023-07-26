@@ -105,8 +105,8 @@ Furthermore, the game possesses several constraints. To be specific, the game re
 
 
 ### Acknowledgements
-- [Dr. Le Duy Tan](https://it.hcmiu.edu.vn/user/ldtan/): Made significant contributions, particularly in Object-Oriented Programming's standard knowledge, which supported for the whole concept of project.
-- [Dr. Kieu Vu Thanh Tung](https://it.hcmiu.edu.vn/user/kvttung/): Provided valuable feedback and suggestions throughout the project's development.
+- [Dr. Le Duy Tan](https://it.hcmiu.edu.vn/user/ldtan/): made significant contributions, particularly in Object-Oriented Programming's standard knowledge, which supported the whole concept of this project.
+- [Dr. Kieu Vu Thanh Tung](https://it.hcmiu.edu.vn/user/kvttung/): provided valuable feedback and suggestions throughout the project's development.
 
 ### Documentation
 - To know more about our project, read [me](https://github.com/koitran14/The-Treasure-Hunt-Project/blob/main/The%20Treasure%20Hunt%20report.pdf).
