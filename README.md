@@ -93,12 +93,12 @@ Just open this project in your IDE, then enjoy 😉
 To summarize, the development of the Treasure Hunt game was made easier and more logical by adopting the Object-Oriented Programming (OOP) approach. This project effectively exemplifies the fundamental principles of OOP, such as encapsulation, abstraction, inheritance, and polymorphism. Alongside gaining expertise in applying OOP principles, it is essential to expand knowledge in related areas beyond the course curriculum. These areas encompass utilizing GIT for version control, resolving software bugs, solving complex problems, programming interactive games, and improving collaboration skills.
 
 ## Limitation
-Furthermore, the game possesses several constraints. To be specific, the game remains unfinished due to time constraints and a lack of sufficient experience and expertise. Consequently, the classes and methods lack proper organization, efficiency, and cleanliness, making testing a rather complex task. Most importantly, the team encountered challenges in constructing, coordinating, and assigning tasks, occasionally necessitating starting over due to inexperience and confusion in the game development process.
+Furthermore, the game possesses several constraints. Specifically, the game remains unfinished due to time constraints and a lack of sufficient experience and expertise. Consequently, the classes and methods lack proper organization, efficiency, and cleanliness, making testing a rather complex task. Most importantly, the team encountered challenges in constructing, coordinating, and assigning tasks, occasionally necessitating starting over due to inexperience and confusion in the game development process.
 ## References
 
 ### Tutorials and Resources
 - [Treasure Hunter - Pixel Frog](https://pixelfrog-assets.itch.io/treasure-hunters): The main source of inspirational concept and animations for this project, including main character, weapons, enemies and environmental elements,...
-- [Java Game Development Tutorial - Kaarin Gaming](https://youtu.be/6_N8QZ47toY): A playlist of video tutorials covering various aspects of the project.
+- [Java Game Development Tutorial - Kaarin Gaming](https://youtu.be/6_N8QZ47toY): A playlist of video tutorials covering various aspects of this project.
 
 ### External Libraries and Frameworks
 - [Java AWT](https://www.geeksforgeeks.org/what-is-java-awt-graphics/): A powerful library used in this project for Graphics. 
@@ -113,4 +113,4 @@ Furthermore, the game possesses several constraints. To be specific, the game re
 <br>
 
 ### Thanks for reading 💖
-_If you have any question, please contact: tndkhoi.work@gmail.com_
+_If you have any questions, please contact: tndkhoi.work@gmail.com_
