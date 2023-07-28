@@ -72,7 +72,7 @@ For more detailed information, you can find out in this [file](https://github.co
 - Container: to contain the potions.
 
 # Installation
-## Cloning the repository
+## ✨ Cloning the repository
 
 ```shell
 git clone https://github.com/koitran14/Store-DashBoard-For-Admin.git
