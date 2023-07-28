@@ -72,6 +72,12 @@ For more detailed information, you can find out in this [file](https://github.co
 - Container: to contain the potions.
 
 # Installation
+## Cloning the repository
+
+```shell
+git clone https://github.com/koitran14/Store-DashBoard-For-Admin.git
+```
+
 Once the download is complete from github, you can launch the game in two ways:
 ### ✨ By Common Prompt (CMD):
 - Step 1: Open the _`src`_ file.
