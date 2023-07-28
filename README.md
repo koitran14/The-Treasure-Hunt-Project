@@ -75,7 +75,7 @@ For more detailed information, you can find out in this [file](https://github.co
 ### ✨ Cloning the repository
 
 ```shell
-git clone https://github.com/koitran14/Store-DashBoard-For-Admin.git
+git clone https://github.com/koitran14/The-Treasure-Hunt-Project.git
 ```
 
 Once the download is complete from github, you can launch the game in two ways:
