@@ -15,7 +15,7 @@ Consequently, our team has made the choice to utilize Java.Swing (Java.awt) as t
 | Order | Full name | ID |
 | ------ | ------ | ------ |
 | 1 | [Tran Ngoc Dang Khoi](https://github.com/koitran14) | ITCSIU21197 |
-| 2 | [Nguyen Tran Hoang Ha](https://github.com/HoangHaITITIU21127) | ITITIU21127 | 
+| 2 | [Nguyen Tran Hoang Ha](https://github.com/hahoang03) | ITITIU21127 | 
 | 3 | [Ha Van Uyen Nhi](https://github.com/Jay2717) | ITCSIU21095 |
 | 4 | [Nguyen Hoang Quan](https://github.com/Quanchip) | ITITIU21291 |
 
