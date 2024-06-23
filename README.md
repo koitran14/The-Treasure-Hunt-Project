@@ -8,7 +8,6 @@
 ![GitHub issues](https://img.shields.io/github/issues/koitran14/The-Treasure-Hunt-Project)
 
 ![](res/obj/5_0OvA.gif)
-#
 
 ## Introduction
 In today’s rapid evolution of technology industry, there is an increasing need for continuous learning and updating of knowledge. To facilitate the adoption of new ideas, Object-Oriented Programming has emerged as a robust paradigm for organizing projects that including code more reusability, modularity, maintainability, and scalability, to embrace new algorithms more easily and systematically.
