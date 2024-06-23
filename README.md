@@ -14,8 +14,12 @@ In today’s rapid evolution of technology industry, there is an increasing need
 
 Consequently, our team has made the choice to utilize Java.Swing (Java.awt) as the primary library for coding and implementing Object-Oriented Programming (OOP) in our game project, _“The Treasure Hunt”_. This decision was made in order to evaluate the viability of the principles inherent in this model. Furthermore, our goals encompassed enhancing our proficiency in collaborative projects and obtaining a more comprehensive comprehension of the game development process.
 
+### After this project, we aim to gain:
+- Deep learning of Object-Oriented Programming's Principles✨
+- Process of game development and some tricks✨
+- Teamwork skills✨
 
-### Team members:
+## Team members:
 
 | Order | Full name | ID |
 | ------ | ------ | ------ |
@@ -23,12 +27,6 @@ Consequently, our team has made the choice to utilize Java.Swing (Java.awt) as t
 | 2 | [Nguyen Tran Hoang Ha](https://github.com/hahoang03) | ITITIU21127 | 
 | 3 | [Ha Van Uyen Nhi](https://github.com/Jay2717) | ITCSIU21095 |
 | 4 | [Nguyen Hoang Quan](https://github.com/Quanchip) | ITITIU21291 |
-
-
-### After this project, we aim to gain:
-- Deep learning of Object-Oriented Programming's Principles✨
-- Process of game development and some tricks✨
-- Teamwork skills✨
 
 
 ## About the game
