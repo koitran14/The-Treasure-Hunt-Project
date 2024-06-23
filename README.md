@@ -9,6 +9,15 @@
 
 ![](res/obj/5_0OvA.gif)
 
+## Team members:
+
+| Order | Full name | ID |
+| ------ | ------ | ------ |
+| 1 | [Tran Ngoc Dang Khoi](https://github.com/koitran14) | ITCSIU21197 |
+| 2 | [Nguyen Tran Hoang Ha](https://github.com/hahoang03) | ITITIU21127 | 
+| 3 | [Ha Van Uyen Nhi](https://github.com/Jay2717) | ITCSIU21095 |
+| 4 | [Nguyen Hoang Quan](https://github.com/Quanchip) | ITITIU21291 |
+
 ## Introduction
 In today’s rapid evolution of technology industry, there is an increasing need for continuous learning and updating of knowledge. To facilitate the adoption of new ideas, Object-Oriented Programming has emerged as a robust paradigm for organizing projects that including code more reusability, modularity, maintainability, and scalability, to embrace new algorithms more easily and systematically.
 
@@ -19,14 +28,6 @@ Consequently, our team has made the choice to utilize Java.Swing (Java.awt) as t
 - Process of game development and some tricks✨
 - Teamwork skills✨
 
-## Team members:
-
-| Order | Full name | ID |
-| ------ | ------ | ------ |
-| 1 | [Tran Ngoc Dang Khoi](https://github.com/koitran14) | ITCSIU21197 |
-| 2 | [Nguyen Tran Hoang Ha](https://github.com/hahoang03) | ITITIU21127 | 
-| 3 | [Ha Van Uyen Nhi](https://github.com/Jay2717) | ITCSIU21095 |
-| 4 | [Nguyen Hoang Quan](https://github.com/Quanchip) | ITITIU21291 |
 
 
 ## About the game
