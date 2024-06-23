@@ -1,4 +1,4 @@
-<div style="align:center;">
+<div align='center'>
 # THE TREASURE HUNT
 #### _Object-Oriented Programming Project_
 
