@@ -1,3 +1,4 @@
+<div style="align:center;">
 # THE TREASURE HUNT
 #### _Object-Oriented Programming Project_
 
@@ -8,6 +9,8 @@
 ![GitHub issues](https://img.shields.io/github/issues/koitran14/The-Treasure-Hunt-Project)
 
 ![](res/obj/5_0OvA.gif)
+  
+</div>
 
 ## Team members:
 
