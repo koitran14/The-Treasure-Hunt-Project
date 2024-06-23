@@ -1,15 +1,13 @@
 <div align='center'>
 
+# THE TREASURE HUNT
+#### _Object-Oriented Programming Project_
+
  ![GitHub repo size](https://img.shields.io/github/repo-size/koitran14/The-Treasure-Hunt-Project)
 ![GitHub contributors](https://img.shields.io/github/contributors/koitran14/The-Treasure-Hunt-Project)
 ![GitHub stars](https://img.shields.io/github/stars/koitran14/The-Treasure-Hunt-Project?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/koitran14/The-Treasure-Hunt-Project?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/koitran14/The-Treasure-Hunt-Project)
-
-# THE TREASURE HUNT
-#### _Object-Oriented Programming Project_
-
-
 
 ![](res/obj/5_0OvA.gif)
   
